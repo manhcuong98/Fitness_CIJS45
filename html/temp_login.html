@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="web"></div>
+    <div id="page" class="stamin-wrapper">
+        <header class="stamin-header header-absolute full-width-container">
+            <div class="header-inner">
+                <nav class="navbar clearfix">
+                    <div class="custom-container navbar-inner">
+                        <ul class="navbar-items nav pull-left">
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <div class="main-logo">
+                                        <a href="https://elementor.zozothemes.com/stamin/" title="Stamin"><img
+                                                class="custom-logo img-responsive"
+                                                src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                                alt="Stamin" title="Stamin"></a>
+                                    </div>
+                                    <div class="sticky-logo">
+                                        <a href="https://elementor.zozothemes.com/stamin/" title="Stamin"><img
+                                                class="img-responsive"
+                                                src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                                alt="Stamin" title="Stamin"></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-items nav pull-right">
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <ul id="stamin-main-menu" class="nav stamin-main-menu">
+                                        <li id="menu-item-12512"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-15 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children nav-item menu-item-12512 dropdown">
+                                            <a href="https://elementor.zozothemes.com/stamin/"
+                                                class="nav-link dropdown-toggle">Home</a>
+
+                                        </li>
+                                        <li id="menu-item-12485"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-12485 dropdown">
+                                            <a href="https://elementor.zozothemes.com/stamin/about-us/"
+                                                class="nav-link dropdown-toggle">Working & Program</a>
+
+                                        </li>
+                                        <li id="menu-item-12496"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-12496 dropdown">
+                                            <a href="https://elementor.zozothemes.com/stamin/our-classes/"
+                                                class="nav-link dropdown-toggle">Gym & Network</a>
+                                        </li>
+                                        <li id="menu-item-11823"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-11823 dropdown">
+                                            <a href="https://elementor.zozothemes.com/stamin/portfolio-style-1/"
+                                                class="nav-link dropdown-toggle">Forum</a>
+
+                                        </li>
+
+                                        <li id="menu-item-12490"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-item menu-item-12490 dropdown">
+                                            <a href="https://elementor.zozothemes.com/stamin/contact-us/"
+                                                class="nav-link dropdown-toggle">Contact Us</a>
+                                            <ul role="menu" class=" dropdown-menu">
+                                                <li id="menu-item-12767"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-12767">
+                                                    <a href="https://elementor.zozothemes.com/stamin/contact-us/"
+                                                        class="nav-link">Contact Us 1</a></li>
+                                                <li id="menu-item-12491"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page nav-item menu-item-12491">
+                                                    <a href="https://elementor.zozothemes.com/stamin/contact-us-2/"
+                                                        class="nav-link">Contact Us 2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <div class="search-toggle-wrap">
+                                        <a class="full-bar-search-toggle" href="#">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <div class="mini-cart-dropdown dropdown">
+                                        <a href="" class="mini-cart-item">
+                                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                            <span class="woo-icon-count stamin-cart-items-count">0</span>
+                                        </a>
+                                        <ul class="dropdown-menu cart-dropdown-menu">
+                                            <li class="cart-item">
+                                                <div>
+                                                    <ul class="user-item">
+                                                        <li>
+                                                            <a href="../html/login.html">Login</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="">Register</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="full-bar-search-wrap ">
+                        <form method="get" class="search-form" action="https://elementor.zozothemes.com/stamin/">
+                            <div class="input-group"> <input name="s" type="text" class="form-control" value=""
+                                    placeholder="Search and hit enter.."></div>
+                        </form> <a href="#" class="close full-bar-search-toggle"></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <footer class="site-footer footer-template-custom">
+            <div class="footer-middle-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-middle-sidebar">
+                                <section id="media_image-1" class="widget widget_media_image"><img width="241"
+                                        height="50"
+                                        src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                        class="image wp-image-25  attachment-full size-full" alt=""
+                                        style="max-width: 100%; height: auto;"></section>
+                                <section id="text-2" class="widget widget_text">
+                                    <div class="textwidget">
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                    </div>
+                                </section>
+                                <section id="zozo_social_widget-3" class="widget zozo_social_widget">
+                                    <ul
+                                        class="nav social-icons social-widget widget-content social-transparent social-white social-h-own social-bg-transparent social-hbg-transparent">
+                                        <li>
+                                            <a href="#" target="_blank" class="social-fb">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank" class="social-twitter">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank" class="social-instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank" class="social-pinterest">
+                                                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" target="_blank" class="social-tumblr">
+                                                <i class="fa fa-tumblr" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-middle-sidebar">
+                                <section id="stamin_latest_post_widget-2" class="widget stamin_latest_post_widget">
+                                    <h3 class="widget-title">Latest Posts</h3>
+                                    <div class="widg-content">
+                                        <ul class="side-newsfeed">
+                                            <li>
+                                                <div class="side-item">
+                                                    <div class="side-image">
+                                                        <a href="https://elementor.zozothemes.com/stamin/2019/04/19/fitness-helps-you-think-and-feel-better/"
+                                                            rel="bookmark"><img width="80" height="80"
+                                                                src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg"
+                                                                class="img-responsive wp-post-image" alt=""
+                                                                srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-100x100.jpg 100w"
+                                                                sizes="(max-width: 80px) 100vw, 80px"></a>
+                                                    </div>
+                                                    <div class="side-item-text"> <a class="themeh-color"
+                                                            href="https://elementor.zozothemes.com/stamin/2019/04/19/fitness-helps-you-think-and-feel-better/"
+                                                            rel="bookmark">Fitness helps you think and feel better</a>
+                                                        <div class="comments-wrap">
+                                                            <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="side-item">
+                                                    <div class="side-image">
+                                                        <a href="https://elementor.zozothemes.com/stamin/2019/04/19/10-tips-how-to-prepare-meals-fast-and-easy/"
+                                                            rel="bookmark"><img width="80" height="80"
+                                                                src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg"
+                                                                class="img-responsive wp-post-image" alt=""
+                                                                srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-100x100.jpg 100w"
+                                                                sizes="(max-width: 80px) 100vw, 80px"></a>
+                                                    </div>
+                                                    <div class="side-item-text"> <a class="themeh-color"
+                                                            href="https://elementor.zozothemes.com/stamin/2019/04/19/10-tips-how-to-prepare-meals-fast-and-easy/"
+                                                            rel="bookmark">10 Tips How to Prepare Meals Fast and
+                                                            Easy</a>
+                                                        <div class="comments-wrap">
+                                                            <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-middle-sidebar">
+                                <section id="null-instagram-feed-2" class="widget null-instagram-feed">
+                                    <h3 class="widget-title">Instagram</h3>
+                                    <ul class="nav instagram-pics instagram-size-thumbnail insta-col-3"></ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-middle-sidebar">
+                                <section id="stamin_mailchimp_widget-2" class="widget stamin_mailchimp_widget">
+                                    <h3 class="widget-title">Newsletter</h3>
+                                    <div class="mailchimp-wrapper">
+                                        <form class="zozo-mc-form" id="zozo-mc-form" method="post">
+                                            <p class="zozo-mc-subtitle">Lorem ipsum is placeholder text commonly used in
+                                                the graphic, print, and publishing industries for previewing layouts and
+                                                visual mockups.</p> <input type="hidden" name="stamin_mc_listid"
+                                                value="">
+                                            <div class="input-group"> <input type="text"
+                                                    class="form-control zozo-mc-email" id="zozo-mc-email"
+                                                    placeholder="Email Address" name="zozo_mc_email"> <input
+                                                    class="input-group-addon zozo-mc btn btn-default" type="button"
+                                                    name="Sign Up" value="Sign Up"></div>
+                                        </form>
+                                        <div class="mc-notice-group" data-success="Success." data-fail="Failure."> <span
+                                                class="mc-notice-msg"></span></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="footer-bottom-items nav pull-center show-opacity" style="margin-left: 427px;">
+                                <li class="nav-item">
+                                    <div class="nav-item-inner">
+                                        <div class="copyright-text-wrap"> Design by <a href="../html/temp.html"
+                                                target="_blank">Mindx</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <a href="#" class="back-to-top position-right" id="back-to-top" style="display: none;"><i
+                    class="ti-angle-up"></i></a>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="..//js/components.js"></script>
+    <script src="..//js/controller.js"></script>
+    <script src="..//js/index.js"></script>
+    <script src="..//js/model.js"></script>
+    <script src="..//js/view.js"></script>
+</body>
+
+</html>
