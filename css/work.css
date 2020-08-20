@@ -1,0 +1,28 @@
+.program-container {
+    padding: 3%;
+    /* border: 1px solid black; */
+}
+.program-container .list-program  {
+    display: flex;
+    height: max-content;
+    /* border: 1px solid black; */
+    padding: 2% 5% ;
+    flex-wrap: wrap;
+}
+.program-container .list-program .program {
+    width: 95%;
+    height: max-content;
+    border: 1px solid black;
+    margin: 10px;
+}
+.program-container .list-program .program .image {
+    background-size: cover;
+    width: 100%;
+    height: 235px ;
+    margin-bottom: 30px;
+}
+.program-container .list-program .program .program-detail {
+    line-height: 30px;
+    padding-left: 7px;
+    padding-bottom: 50px;
+}
