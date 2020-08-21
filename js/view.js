@@ -1,7 +1,7 @@
 for(let i=0 ; i<6 ; i++ ) {
     let child = document.createElement('div')
+    child.classList.add('program')
     child.innerHTML = `
-    <div class="program">
     <div class="image" style=" background-image: url(../image/both/p1-2.png);"></div>
     <div class="program-detail">
         <span style="font-weight: bold;"> Program: </span> Back Rehab and Core Conditioning Workout.<br>
@@ -9,7 +9,6 @@ for(let i=0 ; i<6 ; i++ ) {
         <span style="font-weight: bold;"> Calories burn: </span> burn: 100-140.
 
     </div>
-</div>
     `
     document.querySelector('.list-program').appendChild(child)
 }

@@ -1,11 +1,11 @@
 .program-container {
     padding: 3%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 .program-container .list-program  {
     display: flex;
     height: max-content;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     padding: 2% 5% ;
     flex-wrap: wrap;
 }
