@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 //   console.log(id)
 // }
 
-init =() => {
+init = () => {
   view.setActiveScreen('programs')
 }
 window.onload = init 

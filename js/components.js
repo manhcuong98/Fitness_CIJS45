@@ -4,3 +4,6 @@ components.programsScreen = `
 <div class="list-program"></div>
 </div>
 `
+components.showProgram = `
+<div class="showProgram"></div>
+`
