@@ -5,15 +5,16 @@
 .program-container .list-program  {
     display: flex;
     height: max-content;
-    border: 1px solid black;
-    padding: 2% 5% ;
-    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    padding: 2% 9% ;
+    flex-wrap: wrap; 
 }
 .program-container .list-program .program {
-    width: 95%;
-    height: max-content;
+    width: 31.43%;
+    height: 440px;
     border: 1px solid black;
     margin: 10px;
+    cursor: pointer;
 }
 .program-container .list-program .program .image {
     background-size: cover;
@@ -25,4 +26,20 @@
     line-height: 30px;
     padding-left: 7px;
     padding-bottom: 50px;
+}
+.showProgram .video {
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    margin: 0px 100px;
+}
+.showProgram .text-des {
+    margin: 20px 100px;
+    font-size: larger;
+    line-height: 30px;
+}
+.showProgram .text-des .text {
+    margin-left: 70px;
+}
+.showProgram .text-des .text-detail {
+    margin-left: 100px;
 }
