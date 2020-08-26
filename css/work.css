@@ -27,3 +27,19 @@
     padding-left: 7px;
     padding-bottom: 50px;
 }
+.showProgram .video {
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    margin: 0px 100px;
+}
+.showProgram .text-des {
+    margin: 20px 100px;
+    font-size: larger;
+    line-height: 30px;
+}
+.showProgram .text-des .text {
+    margin-left: 70px;
+}
+.showProgram .text-des .text-detail {
+    margin-left: 100px;
+}
