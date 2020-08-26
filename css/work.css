@@ -32,14 +32,74 @@
     background-color: rgb(32, 32, 32);
     margin: 0px 100px;
 }
+.showProgram .video iframe {
+    width: 1100px!important;
+    height: 618.75px!important;
+}
 .showProgram .text-des {
-    margin: 20px 100px;
+    margin: 20px 20px 0px 20px;
     font-size: larger;
     line-height: 30px;
+    flex-grow: 1;
 }
-.showProgram .text-des .text {
-    margin-left: 70px;
+.showProgram .des .text-des .text {
+    margin-left: 40px;
 }
-.showProgram .text-des .text-detail {
+.showProgram .des .text-des .text-detail {
     margin-left: 100px;
 }
+.showProgram .des {
+    display: flex;
+    margin: 0px 100px;
+    height: 400px;
+    
+}
+.showProgram .des .message-des {
+    width: 50%;
+    height: 400px;
+    border: 1px solid #dbdbdb;
+    margin: 80px 100px;
+    margin-right: auto;
+}
+#send-comment-form .input-wraper input {
+    border: none;
+    border-top: 1px solid #dbdbdb;
+    height: 64px;
+    
+  }
+  #send-comment-form {
+    position: relative;
+  }
+  #send-comment-form button {
+    position: absolute ;
+    padding: 0px 0px !important;
+    right: 15px ;
+    top: 24px ;
+    border: none ;
+    background: none ;
+    columns: #003377 ;
+    font-size: 18px ;
+    color: black ;
+  }
+  
+  #send-comment-form .input-wraper {
+    margin-bottom: 10px;
+  }
+  .message-des .list-comment {
+      height: 334px !important;
+      padding: 15px 30px 15px 15px;
+      overflow-y: auto;
+  }
+  .message-des .list-comment .program-comment{
+      width: 100%;
+      height: max-content;
+      margin: 10px 0px;
+      /* border: 1px solid; */
+  }
+  .message-des .list-comment .program-comment #content {
+      border: 1px solid;
+      border-radius: 8px;
+      padding: 5px 3px;
+      word-break: break-all;
+      margin-top: 4px;
+  }

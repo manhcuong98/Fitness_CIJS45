@@ -8,23 +8,22 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             break;
         case 'a-program':
             document.getElementById('web').innerHTML = components.showProgram
-            let child = document.createElement('div')
-            child.classList.add('video')
-            child.innerHTML = `<iframe width="1100px" height="618.75px"  src="${program.video}" frameborder="0"></iframe>`
-            document.querySelector('.showProgram').appendChild(child)
-            let child1 = document.createElement('div')
-            child1.innerHTML = `
+            
+            document.getElementsByClassName('video')[0].innerHTML = `<iframe width="1100px" height="618.75px"  src="${program.video}" frameborder="0"></iframe>`
+            console.log(program.video)
+            let text = `
             <br><h2 style = "font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">WORKOUT DETAILS </h2>
             <span class = "text" style="font-weight:Bold"> Duration : </span> ${program.time} minutes. <br>
             <span class = "text" style="font-weight:Bold">Calories burn : </span>${program.calo - 20} - ${program.calo + 20}. <br>
             <span class = "text" style="font-weight:Bold">Gender :</span> ${controller.changeGender(program.sex)}. <br>
             `
-            child1.innerHTML += `<div class= "text" style="font-weight:Bold" >Description: </div>`
+            document.getElementsByClassName('text-des')[0].innerHTML = text
+            let temp = document.getElementsByClassName('text-des')[0]
+            
+            temp.innerHTML += `<div class= "text" style="font-weight:Bold" >Description: </div>`
             for (let i = 0; i < program.des.length; i++) {
-                child1.innerHTML += `<div class = "text-detail">- ${program.des[i]}.<div>`
+                temp.innerHTML += `<div class = "text-detail">- ${program.des[i]}.<div>`
             }
-            child1.classList.add('text-des')
-            document.querySelector('.showProgram').appendChild(child1)
             break;
     }
 
@@ -45,7 +44,7 @@ view.loadPrograms = (programs) => {
         `
         document.querySelector('.list-program').appendChild(child)
         child.addEventListener('click', () => {
-            console.log(program.video)
+            
             view.setActiveScreen('a-program', program)
 
         })

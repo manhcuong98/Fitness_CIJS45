@@ -1,0 +1,15 @@
+.input-wraper input {
+    border: 1px solid #dbdddb;   
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+.input-wraper {
+    margin-bottom: 10px;
+}
+* {
+    padding : 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
