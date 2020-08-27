@@ -35,6 +35,7 @@ model.addComment = (id, Comment, User) => {
     }
     if (Comment != '' || Comment.trim() != '') {
         firebase.firestore().collection('programs').doc(id).update(dataUpdate)
+       
         //console.log("aaa")
     }
 }
@@ -46,6 +47,7 @@ model.loadComments = async (id) => {
     if (model.getComment.comments.length > 0) {
         //model.comments = model.conversations[0]
         view.loadCurrentComments(model.getComment.comments)
+       
     }
 }
 model.listenCommentChange = (collection) => {

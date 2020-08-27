@@ -29,10 +29,10 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 event.preventDefault();
                 console.log(sendCommentForm.comment.value)
                 model.addComment(program.id,sendCommentForm.comment.value,"Undefined")
-                if ( sendCommentForm.comment.value!= '' || sendCommentForm.comment.value.trim() != '') model.listenCommentChange("programs")
 
                 sendCommentForm.comment.value = "" 
             })
+            model.listenCommentChange("programs")
             break;
     }
 
