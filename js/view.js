@@ -49,17 +49,16 @@ view.loadForumPosts = (forumPosts) => {
         postWrapper.classList.add('forum-post')
         postWrapper.id = `${post.id}`
         postWrapper.innerHTML=`
-        <div class="image" style="background: url(${post.img});">
-                </div>
+        <img src="${post.img}" alt="">
                 <div class="title">
                    ${post.title}
                 </div>
-                <div>
-                
-                </div>
+                <p>${post.content}</p>
         `
         document.querySelector('.aside-left').appendChild(postWrapper)
         postWrapper.addEventListener('click',()=> {
+            document.querySelector('.aside-left').innerHTML=components.showOneForumPost
+            console.log('show a post');
             view.showOneForumPost(post)
         })
     }
@@ -74,23 +73,24 @@ view.loadListTitles =(forumPosts) =>{
                 </div>
         `
         document.querySelector('.list-title').appendChild(oneTitle)
+       oneTitle.addEventListener('click', () => {
+        document.querySelector('.aside-left').innerHTML=components.showOneForumPost    
+        view.showOneForumPost(post)
+       }) 
     }
 }
 
 view.showOneForumPost =(post) =>{
-    document.getElementsByClassName('aside-left')[0]=''
-    const onePost=document.createElement('div')
-    onePost.classList.add('one-forum-post')
+    const onePost=document.querySelector('.post-content')
     onePost.innerHTML=`
-    <div class="image" style="background: url(${post.img});">
-                </div>
+    <img src="${post.img}" alt="">
                 <div class="title">
                    ${post.title}
                 </div>
                 <p>${post.content}</p>
 
     `
-    document.querySelector('.aside-left').appendChild(onePost)
+    // document.querySelector('.aside-left').appendChild(onePost)
     // const onePost=document.getElementsByClassName('aside-left')[0]
     // onePost.innerHTML=''
     // const html=`
