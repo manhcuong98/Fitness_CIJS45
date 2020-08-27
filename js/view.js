@@ -1,4 +1,7 @@
 //console.log(model.programs)
+
+
+
 const view = {}
 view.setActiveScreen = async (screenName, program = undefined) => {
     switch (screenName) {
@@ -28,7 +31,8 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             sendCommentForm.addEventListener('submit' , (event) => {
                 event.preventDefault();
                 console.log(sendCommentForm.comment.value)
-                model.addComment(program.id,sendCommentForm.comment.value,"Undefined")
+                const date = new Date().toLocaleString('en-GB', { timeZone: "Asia/Bangkok" }).substr(0, 20).replace('T', ' ')
+                model.addComment(program.id,sendCommentForm.comment.value,date,"Undefined")
 
                 sendCommentForm.comment.value = "" 
             })
@@ -39,6 +43,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
 }
 
 view.loadPrograms = (programs) => {
+    document.getElementsByClassName('list-program')[0].innerHTML = ""
     for (let program of programs) {
         let child = document.createElement('div')
         child.classList.add('program')
@@ -66,18 +71,24 @@ view.loadCurrentComments = (currentComment) => {
         let commentWrapper = document.createElement('div')
         commentWrapper.classList.add('program-comment')
         commentWrapper.innerHTML = `
+        <div id="information">
         <div id="user">${currentComment[i].user}</div>
+        <div id="date">${currentComment[i].date}</div>
+        </div>
         <div id="content">${currentComment[i].comment}</div>
         `
         document.querySelector('.list-comment').appendChild(commentWrapper)
     }
     view.scrollToEndElement()
 }
-view.addComment = (comment,user) => {
+view.addComment = (comment,user,date) => {
     let commentWrapper = document.createElement('div')
         commentWrapper.classList.add('program-comment')
         commentWrapper.innerHTML = `
+        <div id="information">
         <div id="user">${user}</div>
+        <div id="date">${date}</div>
+        </div>
         <div id="content">${comment}</div>
         `
         document.querySelector('.list-comment').appendChild(commentWrapper)

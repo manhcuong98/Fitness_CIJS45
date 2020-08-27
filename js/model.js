@@ -26,16 +26,17 @@ model.loadprograms = async () => {
     model.programs = await getDataFromDocs(respone.docs)
     view.loadPrograms(model.programs)
 }
-model.addComment = (id, Comment, User) => {
+model.addComment = (id, Comment, Date, User) => {
     const dataUpdate = {
         comments: firebase.firestore.FieldValue.arrayUnion({
             comment: Comment,
-            user: User
+            user: User,
+            date: Date,
         })
     }
     if (Comment != '' || Comment.trim() != '') {
         firebase.firestore().collection('programs').doc(id).update(dataUpdate)
-       
+
         //console.log("aaa")
     }
 }
@@ -47,7 +48,7 @@ model.loadComments = async (id) => {
     if (model.getComment.comments.length > 0) {
         //model.comments = model.conversations[0]
         view.loadCurrentComments(model.getComment.comments)
-       
+
     }
 }
 model.listenCommentChange = (collection) => {
@@ -67,9 +68,94 @@ model.listenCommentChange = (collection) => {
             if (type == "modified") {
                 const docData = getDataFromDoc(oneChange.doc)
                 const lastComment = docData.comments[docData.comments.length - 1]
-                view.addComment(lastComment.comment,lastComment.user)
+                view.addComment(lastComment.comment, lastComment.user, lastComment.date)
                 view.scrollToEndElement()
             }
         }
     })
+}
+model.filter = async () => {
+    console.log("a")
+    let filterProgram = []
+    const respone = await firebase.firestore().collection('programs').get()
+    let programs = await getDataFromDocs(respone.docs)
+    let calo = +document.getElementById("calo").value;
+    let time = +document.getElementById("time").value;
+    let sex = +document.getElementById("sex").value;
+    // ko nhập cả 3
+    if (isNaN(calo) && isNaN(time) && isNaN(sex)) {
+        view.loadPrograms(programs);
+        console.log(1)
+        return;
+    }
+    // chỉ nhập calo
+    if (!isNaN(calo) && isNaN(time) && isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return (value.calo >= calo - 20 && value.calo <= calo + 20);
+        }
+        )
+        view.loadPrograms(filterProgram);
+        console.log(2)
+        return;
+    }
+    // chỉ nhập sex
+    if (isNaN(calo) && isNaN(time) && !isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return value.sex == sex;
+        }
+        )
+        console.log(3)
+        view.loadPrograms(filterProgram);
+        return;
+    }
+    // chỉ nhập time
+    if (isNaN(calo) && !isNaN(time) && isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return value.time >= time - 5 && value.time <= time + 5;
+        }
+        )
+        console.log(4)
+        view.loadPrograms(filterProgram);
+        return;
+    }
+    // nhập calo và sex
+    if (!isNaN(calo) && isNaN(time) && !isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return value.sex == sex && (value.calo >= calo - 20 && value.calo <= calo + 20);
+        }
+        )
+        console.log(5)
+        view.loadPrograms(filterProgram);
+        return;
+    }
+    // calo và time
+    if (!isNaN(calo) && !isNaN(time) && isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return (value.time >= time - 5 && value.time <= time + 5) && (value.calo >= calo - 20 && value.calo <= calo + 20);
+        }
+        )
+        console.log(5)
+        view.loadPrograms(filterProgram);
+        return;
+    }
+    // time và sex
+    if (isNaN(calo) && !isNaN(time) && !isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return (value.time >= time - 5 && value.time <= time + 5) && value.sex == sex;
+        }
+        )
+        console.log(6)
+        view.loadPrograms(filterProgram);
+        return;
+    }
+    // nhập cả 3
+    if (!isNaN(calo) && !isNaN(time) && !isNaN(sex)) {
+        filterProgram = programs.filter(function (value) {
+            return (value.time >= time - 5 && value.time <= time + 5) && value.sex == sex && (value.calo >= calo - 20 && value.calo <= calo + 20);
+        }
+        )
+        console.log(7)
+        view.loadPrograms(filterProgram);
+        return;
+    }
 }
