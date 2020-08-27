@@ -11,6 +11,8 @@ model.selectedProgram= undefined;
 //         model.programs.push(temp)
 //     });
 // });
+model.forumPosts=[]
+model.selectedForumPost=undefined
 
 getDataFromDoc = (doc) => {
     const data = doc.data()
@@ -20,6 +22,13 @@ getDataFromDoc = (doc) => {
 getDataFromDocs = (docs) => {
     return docs.map(item => getDataFromDoc(item))
 }
+model.loadForumPosts =async () => {
+    const respone = await firebase.firestore().collection('forum').get()
+    model.forumPosts = await getDataFromDocs(respone.docs)
+    view.loadForumPosts(model.forumPosts)
+    view.loadListTitles(model.forumPosts)
+}
+
 model.loadprograms = async () => {
     const respone = await firebase.firestore().collection('programs').get()
     model.programs = await getDataFromDocs(respone.docs)

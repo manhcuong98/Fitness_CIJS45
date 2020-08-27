@@ -6,13 +6,13 @@
     display: flex;
 }
 .forum-containner .aside-right{
-    width: 25%;
+    width: 290px;
     justify-content: flex-end;
-    padding: 20px 15px;
+    padding: 20px 0px;
 }
 .forum-containner .aside-left{
     flex-grow: 1;
-    padding: 20px 30px 10px 20px;
+    padding: 25px 40px 10px 25px;
     border-right: 1px solid #dbdbdb;
 }
 .forum-post{
@@ -30,7 +30,7 @@
 .forum-containner .aside-right .list-title .title-post{
     border-bottom: 1px solid #dbdbdb;
     height: 64px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,12 +52,13 @@
     margin-bottom: 10px;
 }
 .forum-containner .aside-left .forum-post .image{
-    background-size: cover;
+    /* background-size: cover; */
     height: 490px;
+    width: 800px;
 } 
 .forum-containner .aside-left .forum-post .title{
-    margin: 20px;
-    height: 64px;
+    margin: 20px 20px 0px 20px;
+    height: 50px;
     font-size: 30px;
     font-weight: 700;
     line-height: 64px;
@@ -65,4 +66,21 @@
     /* font-style: italic; */
     font-weight: bold;
     cursor: pointer;
+}
+.forum-containner .aside-left .forum-post p{
+    /* margin: 0px 20px 20px 20px; */
+    height: 75px;
+    font-size: 16px;
+    line-height: 25px;
+    border: 1px solid;
+    word-break: break-all;
+    overflow: hidden;
+    
+}
+.forum-containner .aside-left p{
+    max-width: 800px;
+}
+.forum-containner .aside-left .one-forum-post{
+    width: 800px;
+    
 }

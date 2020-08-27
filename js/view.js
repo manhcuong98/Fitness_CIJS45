@@ -25,8 +25,76 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 temp.innerHTML += `<div class = "text-detail">- ${program.des[i]}.<div>`
             }
             break;
+        case 'forumScreen' :
+            document.getElementById('web').innerHTML=components.forumScreen
+            model.loadForumPosts()
+            break;
     }
 
+}
+
+view.loadForumPosts = (forumPosts) => {
+    console.log(forumPosts);
+    for(let post of forumPosts){
+        const postWrapper =document.createElement('div')
+        postWrapper.classList.add('forum-post')
+        postWrapper.id = `${post.id}`
+        postWrapper.innerHTML=`
+        <div class="image" style="background: url(${post.img});">
+                </div>
+                <div class="title">
+                   ${post.title}
+                </div>
+                <div>
+                
+                </div>
+        `
+        document.querySelector('.aside-left').appendChild(postWrapper)
+        postWrapper.addEventListener('click',()=> {
+            view.showOneForumPost(post)
+        })
+    }
+}
+
+view.loadListTitles =(forumPosts) =>{
+    for(let post of forumPosts){
+        const oneTitle =document.createElement('div')
+        oneTitle.innerHTML=`
+        <div class="title-post">
+                   ${post.title}
+                </div>
+        `
+        document.querySelector('.list-title').appendChild(oneTitle)
+    }
+}
+
+view.showOneForumPost =(post) =>{
+    document.getElementsByClassName('aside-left')[0]=''
+    const onePost=document.createElement('div')
+    onePost.classList.add('one-forum-post')
+    onePost.innerHTML=`
+    <div class="image" style="background: url(${post.img});">
+                </div>
+                <div class="title">
+                   ${post.title}
+                </div>
+                <p>${post.content}</p>
+
+    `
+    document.querySelector('.aside-left').appendChild(onePost)
+    // const onePost=document.getElementsByClassName('aside-left')[0]
+    // onePost.innerHTML=''
+    // const html=`
+    // <div class="image" style="background: url(${post.img});">
+    //             </div>
+    //             <div class="title">
+    //                 ${post.title}
+    //             </div>
+    //              <p>${post.content}</p>
+    // `
+    // onePost.innerHTML=html
+
+    
 }
 
 view.loadPrograms = (programs) => {

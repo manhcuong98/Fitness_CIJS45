@@ -47,3 +47,27 @@ components.showProgram = `
         </div>
     
 `
+components.forumScreen =`
+<div class="forum-containner">
+<div class="forum-header">
+    Forum
+</div>
+<div class="main">
+    <div class="aside-left">
+        
+    </div>
+    <div class="aside-right">
+        <div class="title">
+            Recent Posts
+        </div>
+        <div class="list-title">
+
+        </div>
+        <div class="create-post">
+            <button class="btn">Create a new post</button>
+        </div>
+        
+    </div>
+</div>
+</div>
+`
