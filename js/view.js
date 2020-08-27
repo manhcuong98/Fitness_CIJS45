@@ -29,6 +29,8 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 event.preventDefault();
                 console.log(sendCommentForm.comment.value)
                 model.addComment(program.id,sendCommentForm.comment.value,"Undefined")
+                if ( sendCommentForm.comment.value!= '' || sendCommentForm.comment.value.trim() != '') model.listenCommentChange("programs")
+
                 sendCommentForm.comment.value = "" 
             })
             break;
@@ -56,6 +58,7 @@ view.loadPrograms = (programs) => {
 
         })
     }
+    
 }
 view.loadCurrentComments = (currentComment) => {
     
@@ -68,6 +71,20 @@ view.loadCurrentComments = (currentComment) => {
         `
         document.querySelector('.list-comment').appendChild(commentWrapper)
     }
+    view.scrollToEndElement()
+}
+view.addComment = (comment,user) => {
+    let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('program-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${user}</div>
+        <div id="content">${comment}</div>
+        `
+        document.querySelector('.list-comment').appendChild(commentWrapper)
+        view.scrollToEndElement()
 }
 
-
+view.scrollToEndElement = () => {
+    const element = document.querySelector('.list-comment')
+    element.scrollTop = element.scrollHeight;
+}
