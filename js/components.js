@@ -11,30 +11,6 @@ components.showProgram = `
                 <div class="text-des"></div>
                 <div class="message-des">
                     <div class="list-comment">
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytreaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-                        </div>
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytre</div>
-                        </div>
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytre</div>
-                        </div>
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytre</div>
-                        </div>
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytre</div>
-                        </div>
-                        <div class="program-comment">
-                            <div id="user"> alodddd</div>
-                            <div id="content">asdfghjklpoiuytre</div>
-                        </div>
                     </div>
                     <form id="send-comment-form">
                         <div class="input-wraper">

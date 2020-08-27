@@ -8,7 +8,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             break;
         case 'a-program':
             document.getElementById('web').innerHTML = components.showProgram
-            
+            model.loadComments(program.id)
             document.getElementsByClassName('video')[0].innerHTML = `<iframe width="1100px" height="618.75px"  src="${program.video}" frameborder="0"></iframe>`
             console.log(program.video)
             let text = `
@@ -24,6 +24,15 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             for (let i = 0; i < program.des.length; i++) {
                 temp.innerHTML += `<div class = "text-detail">- ${program.des[i]}.<div>`
             }
+            const sendCommentForm = document.getElementById('send-comment-form')
+            sendCommentForm.addEventListener('submit' , (event) => {
+                event.preventDefault();
+                console.log(sendCommentForm.comment.value)
+                model.addComment(program.id,sendCommentForm.comment.value,"Undefined")
+
+                sendCommentForm.comment.value = "" 
+            })
+            model.listenCommentChange("programs")
             break;
         case 'forumScreen' :
             document.getElementById('web').innerHTML=components.forumScreen
@@ -117,7 +126,33 @@ view.loadPrograms = (programs) => {
 
         })
     }
+    
+}
+view.loadCurrentComments = (currentComment) => {
+    
+    for(let i=0 ; i<currentComment.length ;i++) {
+        let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('program-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${currentComment[i].user}</div>
+        <div id="content">${currentComment[i].comment}</div>
+        `
+        document.querySelector('.list-comment').appendChild(commentWrapper)
+    }
+    view.scrollToEndElement()
+}
+view.addComment = (comment,user) => {
+    let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('program-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${user}</div>
+        <div id="content">${comment}</div>
+        `
+        document.querySelector('.list-comment').appendChild(commentWrapper)
+        view.scrollToEndElement()
 }
 
-
-
+view.scrollToEndElement = () => {
+    const element = document.querySelector('.list-comment')
+    element.scrollTop = element.scrollHeight;
+}
