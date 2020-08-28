@@ -2,6 +2,7 @@ const model = {}
 model.programs = [];
 model.selectedProgram = undefined;
 model.getComment = undefined
+model.currentForumComment=undefined
 // firebase.firestore().collection("programs").get().then(function(querySnapshot) {
 //     querySnapshot.forEach(function(doc) {
 //         // doc.data() is never undefined for query doc snapshots
@@ -78,6 +79,53 @@ model.listenCommentChange = (collection) => {
                 const lastComment = docData.comments[docData.comments.length - 1]
                 view.addComment(lastComment.comment,lastComment.user)
                 view.scrollToEndElement()
+            }
+        }
+    })
+}
+
+model.loadForumComments = async (id) => {
+    const respone = await firebase.firestore().collection("forum").doc(id).get()
+    //console.log(respone)
+    model.currentForumComment = await getDataFromDoc(respone)
+    //console.log(model.getComment.comments)
+    if (model.currentForumComment.comments.length > 0) {
+        //model.comments = model.conversations[0]
+        view.loadCurrentForumComments(model.currentForumComment.comments)
+       
+    }
+}
+model.addForumComment = (id, Comment, User) => {
+    const dataUpdate = {
+        comments: firebase.firestore.FieldValue.arrayUnion({
+            comment: Comment,
+            user: User
+        })
+    }
+    
+        firebase.firestore().collection('forum').doc(id).update(dataUpdate)
+       
+        console.log("aaa")
+    
+}
+model.listenForumCommentChange = () => {
+    let isFirstRun = true;
+    console.log('g')
+    firebase.firestore().collection('forum').onSnapshot((res) => {
+        console.log("alo")
+        if (isFirstRun) {
+            isFirstRun = false;
+            return;
+        }
+        const docChanges = res.docChanges();
+        for (oneChange of docChanges) {
+            const type = oneChange.type
+
+            if (type == "modified") {
+                const docData = getDataFromDoc(oneChange.doc)
+                const lastComment = docData.comments[docData.comments.length - 1]
+                view.addForumComment(lastComment.comment,lastComment.user)
+                view.scrollToEnd()
             }
         }
     })

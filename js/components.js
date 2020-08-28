@@ -57,22 +57,13 @@ components.showOneForumPost=`
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
             </form>
                     <div class="list-forum-comment">
-                        <div class="forum-comment">
-                        <div id="user">Quoc Huy</div>
-                        <div id="content">aafaaaaaaaaaaafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaaaaaaaaaagsggdg</div>
-                        </div>
                         
-                        <div class="forum-comment">
-                        <div id="user">Quoc Huy</div>
-                        <div id="content">aafaaaaaaaaaaafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaaaaaaaaaagsggdg</div>
-                        </div>
-                        
-                        <div class="forum-comment">
-                        <div id="user">Quoc Huy</div>
-                        <div id="content">aafaaaaaaaaaaafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaaaaaaaaaaaaagsggdg</div>
-                        </div>
                     </div>
                         
                 </div>
             </div>
     `
+
+
+
+    

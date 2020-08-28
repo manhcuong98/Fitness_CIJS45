@@ -37,9 +37,9 @@ view.setActiveScreen = async (screenName, program = undefined) => {
         case 'forumScreen' :
             document.getElementById('web').innerHTML=components.forumScreen
             model.loadForumPosts()
-            break;
+            model.listenForumCommentChange()         
+            break;    
     }
-
 }
 
 view.loadForumPosts = (forumPosts) => {
@@ -58,8 +58,9 @@ view.loadForumPosts = (forumPosts) => {
         document.querySelector('.aside-left').appendChild(postWrapper)
         postWrapper.addEventListener('click',()=> {
             document.querySelector('.aside-left').innerHTML=components.showOneForumPost
-            console.log('show a post');
             view.showOneForumPost(post)
+            console.log('show a post');
+            model.loadForumComments(post.id)
         })
     }
 }
@@ -76,6 +77,7 @@ view.loadListTitles =(forumPosts) =>{
        oneTitle.addEventListener('click', () => {
         document.querySelector('.aside-left').innerHTML=components.showOneForumPost    
         view.showOneForumPost(post)
+        model.loadForumComments(post.id)
        }) 
     }
 }
@@ -88,7 +90,6 @@ view.showOneForumPost =(post) =>{
                    ${post.title}
                 </div>
                 <p>${post.content}</p>
-
     `
     // document.querySelector('.aside-left').appendChild(onePost)
     // const onePost=document.getElementsByClassName('aside-left')[0]
@@ -102,8 +103,15 @@ view.showOneForumPost =(post) =>{
     //              <p>${post.content}</p>
     // `
     // onePost.innerHTML=html
-
-    
+    const sendForumCommentForm = document.getElementById('send-forum-comment-form')
+            sendForumCommentForm.addEventListener('submit' , (event) => {
+                event.preventDefault();
+                console.log(sendForumCommentForm.comment.value)
+                if (sendForumCommentForm.comment.value.trim() != '') {
+                model.addForumComment(post.id,sendForumCommentForm.comment.value,"no name")  
+                } 
+                sendForumCommentForm.comment.value = ""
+            }) 
 }
 
 view.loadPrograms = (programs) => {
@@ -154,5 +162,32 @@ view.addComment = (comment,user) => {
 
 view.scrollToEndElement = () => {
     const element = document.querySelector('.list-comment')
+    element.scrollTop = element.scrollHeight;
+}
+view.loadCurrentForumComments = (currentForumComment) => {
+    
+    for(let i=0 ; i<currentForumComment.length ;i++) {
+        let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('forum-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${currentForumComment[i].user}</div>
+        <div id="content">${currentForumComment[i].comment}</div>
+        `
+        document.querySelector('.list-forum-comment').appendChild(commentWrapper)
+    }
+    view.scrollToEnd()
+}
+view.addForumComment = (comment,user) => {
+    let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('forum-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${user}</div>
+        <div id="content">${comment}</div>
+        `
+        document.querySelector('.list-forum-comment').appendChild(commentWrapper)
+         view.scrollToEnd()
+}
+view.scrollToEnd = () => {
+    const element = document.querySelector('.list-forum-comment')
     element.scrollTop = element.scrollHeight;
 }

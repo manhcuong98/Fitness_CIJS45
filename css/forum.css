@@ -17,7 +17,7 @@
     /* border-right: 1px solid ; */
 }
 .forum-containner .aside-left .forum-post{
-    width: 100%;
+    width: 800px;
     height: max-content;
     border: 1px solid #dbdbdb ;
     margin-bottom: 20px;
@@ -99,8 +99,7 @@
     
 } */
 .forum-containner .aside-left .one-forum-post{
-    /* width: 800px; */
-    width: 100%;
+    width: 800px;
     height: max-content;
     border: 1px solid #dbdbdb ;
     margin-bottom: 20px;
@@ -150,8 +149,8 @@
   #send-forum-comment-form button {
     position: absolute ;
     padding: 0px 0px !important;
-    right: 15px ;
-    top: 24px ;
+    right: 20px ;
+    top: 30px ;
     border: none ;
     background: none ;
     columns: #003377 ;
@@ -184,4 +183,5 @@
   .forum-containner .aside-left .comment-wrapper .list-forum-comment .forum-comment #content{
     max-width: 600px;
     word-break: break-all;
+    color: #333333;
   }
