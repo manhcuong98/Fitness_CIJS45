@@ -41,7 +41,23 @@ view.setActiveScreen = async (screenName, program = undefined) => {
         case 'forumScreen' :
             document.getElementById('web').innerHTML=components.forumScreen
             model.loadForumPosts()
-            model.listenForumCommentChange()         
+            model.listenForumCommentChange()
+            
+            const uploadPostForm = document.getElementById('upload-post')
+            uploadPostForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const files = uploadPostForm.file.files
+                const contentUpload=uploadPostForm.content.value.trim()
+                const titleUpload=uploadPostForm.title.value.trim()
+                if(files.length === 0 || contentUpload==="" || titleUpload==="") {
+                // alert('Please choose file!')
+                console.log('nhap thieu');
+                } 
+                else {
+                    console.log('nhap du');
+                    model.uploadPost(files[0], contentUpload, titleUpload)
+                }
+            })
             break;    
     }
 }

@@ -53,8 +53,18 @@ components.showProgram = `
 `
 components.forumScreen =`
 <div class="forum-containner">
-<div class="forum-header">
-    Forum
+<div class="create-new-post">
+    <div class="header">Create a new post</div>
+    <form id="upload-post">
+        <div class="input-wraper">
+            <input type="text" name="title" placeholder="Title...">
+        </div>
+        <div class="input-wraper">
+            <input type="text" name="content" placeholder="Content...">
+        </div>
+        <input type="file" name="file">
+        <button type="submit">Upload file</button>
+    </form>
 </div>
 <div class="main">
     <div class="aside-left">
