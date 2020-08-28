@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="web"></div>
+
+    <div class="header">
+        <div class="custom-container navbar-inner">
+            <ul class="navbar-items nav pull-left">
+                <li class="nav-item">
+                    <div class="nav-item-inner">
+                        <div class="main-logo">
+                            <a href="#" title="Stamin">
+                                <img class="custom-logo img-responsive"
+                                    src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                    alt="Stamin" title="Stamin">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navMenu navbar-items nav">
+                <li class="nav-item">
+                    <div class="nav-item-inner">
+                        <ul id="stamin-main-menu" class="nav stamin-main-menu">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Working & Program</a>
+
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Gym & Network</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Forum</a>
+
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="nav-link dropdown-toggle">Contact Us</a>
+                                <ul role="menu" class=" dropdown-menu">
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link">Contact Us 1</a></li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link">Contact Us 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="user">
+                    <li class="nav-item">
+                        <div class="nav-item-inner">
+                            <div class="search-toggle-wrap">
+                                <a class="full-bar-search-toggle" href="#">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item-inner">
+                            <div class="mini-cart-dropdown dropdown">
+                                <a href="" class="mini-cart-item">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu cart-dropdown-menu">
+                                    <li class="cart-item">
+                                        <div>
+                                            <ul class="user-item">
+                                                <li>
+                                                    <a href="../html/temp_login.html">Login</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../html/temp_register.html">Register</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sign up form -->
+    <section class="signup">
+        <div class="container1">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <div>
+                        <h2 class="form-title">Sign up</h2>
+                    </div>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                        </div>
+                        <div class="form-group styleGender">
+                            <div class="flex1">
+                                <label for="re-pass"><i class="zmdi zmdi-male-female"></i></label>
+                                <select name="Sex" id="dropdownid" aria-placeholder="sex" required>
+                                    <option value="" disabled="disabled" selected="selected">Gender</option>
+                                    <i class="zmdi zmdi-chevron-down"></i>
+                                    <option value="0">Male</option>
+                                    <option value="1">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group styleForm">
+                            <div style="margin-right: 5px;">
+                                <input type="text" placeholder="Height">
+                            </div>
+                            <div style="margin-left: 5px;">
+                                <input type="text" placeholder="Weight">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                statements in <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                        </div>
+
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="../image/image-style/81a29540400159.577dcf3623a88.gif" alt="sing up image">
+                    </figure>
+                    <a href="#" class="signup-image-link">I am already member</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="media_image-1" class="widget widget_media_image">
+                                <img width="241" height="50"
+                                    src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                    class="image wp-image-25  attachment-full size-full" alt=""
+                                    style="max-width: 100%; height: auto;"></section>
+
+                            <section id="text-2" class="widget widget_text">
+                                <div class="textwidget">
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                </div>
+                            </section>
+                            <section id="zozo_social_widget-3" class="widget zozo_social_widget">
+                                <ul class="social">
+                                    <li>
+                                        <a href="#" target="_blank" class="social-fb">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" class="social-twitter">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-instagram">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-pinterest">
+                                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-tumblr">
+                                            <i class="fa fa-tumblr" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="stamin_latest_post_widget-2" class="widget stamin_latest_post_widget">
+                                <h3 class="widget-title">Latest Posts</h3>
+                                <div class="widg-content">
+                                    <ul class="side-newsfeed">
+                                        <li>
+                                            <div class="side-item">
+                                                <div class="side-image">
+                                                    <a href="#" rel="bookmark"><img width="80" height="80"
+                                                            src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg"
+                                                            class="img-responsive wp-post-image" alt=""
+                                                            srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-100x100.jpg 100w"
+                                                            sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                <div class="side-item-text"> <a class="themeh-color" href="#"
+                                                        rel="bookmark">Fitness helps you think and feel better</a>
+                                                    <div class="comments-wrap">
+                                                        <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="side-item">
+                                                <div class="side-image"> <a href="#" rel="bookmark"><img width="80"
+                                                            height="80"
+                                                            src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg"
+                                                            class="img-responsive wp-post-image" alt=""
+                                                            srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-100x100.jpg 100w"
+                                                            sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                <div class="side-item-text"> <a class="themeh-color" href="#"
+                                                        rel="bookmark">10 Tips How to Prepare Meals Fast and Easy</a>
+                                                    <div class="comments-wrap">
+                                                        <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="null-instagram-feed-2" class="widget null-instagram-feed">
+                                <h3 class="widget-title">Instagram</h3>
+                                <ul class="nav instagram-pics instagram-size-thumbnail insta-col-3"></ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="stamin_mailchimp_widget-2" class="widget stamin_mailchimp_widget">
+                                <h3 class="widget-title">Newsletter</h3>
+                                <div class="mailchimp-wrapper">
+                                    <form class="zozo-mc-form" id="zozo-mc-form" method="post">
+                                        <p class="zozo-mc-subtitle">Lorem ipsum is placeholder text commonly used in the
+                                            graphic, print, and publishing industries for previewing layouts and visual
+                                            mockups.</p> <input type="hidden" name="stamin_mc_listid" value="">
+                                        <div class="input-group"> <input type="text" class="form-control zozo-mc-email"
+                                                id="zozo-mc-email" placeholder="Email Address" name="zozo_mc_email">
+                                            <input class="input-group-addon zozo-mc btn btn-default" type="button"
+                                                name="Sign Up" value="Sign Up"></div>
+                                    </form>
+                                    <div class="mc-notice-group" data-success="Success." data-fail="Failure."> <span
+                                            class="mc-notice-msg"></span></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="..//js/components.js"></script>
+    <script src="..//js/controller.js"></script>
+    <script src="..//js/index.js"></script>
+    <script src="..//js/model.js"></script>
+    <script src="..//js/view.js"></script>
+</body>
+
+</html>

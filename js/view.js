@@ -42,9 +42,73 @@ view.setActiveScreen = async (screenName, program = undefined) => {
         case 'gym-network':
             document.getElementById('web').innerHTML = components.showNetwork
             model.loadGymNetwork();
+        case 'forumScreen' :
+            document.getElementById('web').innerHTML=components.forumScreen
+            model.loadForumPosts()
+            model.listenForumCommentChange()         
+            break;    
     }
+}
+
+view.loadForumPosts = (forumPosts) => {
+    console.log(forumPosts);
+    for(let post of forumPosts){
+        const postWrapper =document.createElement('div')
+        postWrapper.classList.add('forum-post')
+        postWrapper.id = `${post.id}`
+        postWrapper.innerHTML=`
+        <img src="${post.img}" alt="">
+                <div class="title">
+                   ${post.title}
+                </div>
+                <p>${post.content}</p>
+        `
+        document.querySelector('.aside-left').appendChild(postWrapper)
+        postWrapper.addEventListener('click',()=> {
+            document.querySelector('.aside-left').innerHTML=components.showOneForumPost
+            view.showOneForumPost(post)
+            console.log('show a post');
+            model.loadForumComments(post.id)
+        })
+    }
+}
 
 
+view.loadListTitles =(forumPosts) =>{
+    for(let post of forumPosts){
+        const oneTitle =document.createElement('div')
+        oneTitle.innerHTML=`
+        <div class="title-post">
+                   ${post.title}
+                </div>
+        `
+        document.querySelector('.list-title').appendChild(oneTitle)
+       oneTitle.addEventListener('click', () => {
+        document.querySelector('.aside-left').innerHTML=components.showOneForumPost    
+        view.showOneForumPost(post)
+        model.loadForumComments(post.id)
+       }) 
+    }
+}
+
+view.showOneForumPost =(post) =>{
+    const onePost=document.querySelector('.post-content')
+    onePost.innerHTML=`
+    <img src="${post.img}" alt="">
+                <div class="title">
+                   ${post.title}
+                </div>
+                <p>${post.content}</p>
+    `
+    const sendForumCommentForm = document.getElementById('send-forum-comment-form')
+            sendForumCommentForm.addEventListener('submit' , (event) => {
+                event.preventDefault();
+                console.log(sendForumCommentForm.comment.value)
+                if (sendForumCommentForm.comment.value.trim() != '') {
+                model.addForumComment(post.id,sendForumCommentForm.comment.value,"no name")  
+                } 
+                sendForumCommentForm.comment.value = ""
+            }) 
 }
 
 view.loadPrograms = (programs) => {
@@ -115,5 +179,32 @@ view.loadGymNetWork = (arr) => {
 
 view.scrollToEndElement = () => {
     const element = document.querySelector('.list-comment')
+    element.scrollTop = element.scrollHeight;
+}
+view.loadCurrentForumComments = (currentForumComment) => {
+    
+    for(let i=0 ; i<currentForumComment.length ;i++) {
+        let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('forum-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${currentForumComment[i].user}</div>
+        <div id="content">${currentForumComment[i].comment}</div>
+        `
+        document.querySelector('.list-forum-comment').appendChild(commentWrapper)
+    }
+    view.scrollToEnd()
+}
+view.addForumComment = (comment,user) => {
+    let commentWrapper = document.createElement('div')
+        commentWrapper.classList.add('forum-comment')
+        commentWrapper.innerHTML = `
+        <div id="user">${user}</div>
+        <div id="content">${comment}</div>
+        `
+        document.querySelector('.list-forum-comment').appendChild(commentWrapper)
+         view.scrollToEnd()
+}
+view.scrollToEnd = () => {
+    const element = document.querySelector('.list-forum-comment')
     element.scrollTop = element.scrollHeight;
 }

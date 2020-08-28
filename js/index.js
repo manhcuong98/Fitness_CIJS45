@@ -17,5 +17,6 @@ firebase.initializeApp(firebaseConfig);
 
 init = () => {
   view.setActiveScreen('gym-network')
+  view.setActiveScreen('forumScreen')
 }
 window.onload = init 
