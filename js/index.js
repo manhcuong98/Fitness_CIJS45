@@ -16,6 +16,6 @@ firebase.initializeApp(firebaseConfig);
 // }
 
 init = () => {
-  view.setActiveScreen('programs')
+  view.setActiveScreen('gym-network')
 }
 window.onload = init 

@@ -74,7 +74,30 @@ model.listenCommentChange = (collection) => {
         }
     })
 }
-model.filter = async () => {
+model.loadGymNetwork = async () => {
+    const respone = await firebase.firestore().collection("network").doc('D7LCMIcgD20m5lVArTZ2').get()
+    //console.log(respone)
+    model.getNetwork = await getDataFromDoc(respone)
+    //console.log(model.getNetwork.gymNetwork)
+    view.loadGymNetWork(model.getNetwork.gymNetwork)
+}
+model.gymFindLocation = async () => {
+    const respone = await firebase.firestore().collection("network").doc('D7LCMIcgD20m5lVArTZ2').get()
+    let locationNetwork = await getDataFromDoc(respone)
+    let location = +document.getElementById("location").value;
+    console.log(location);
+    if (location == 1 || location == 2) {
+        let result = locationNetwork.gymNetwork.filter(function (value) {
+            return value.city == location;
+        }
+        )
+        view.loadGymNetWork(result);
+        return;
+    }
+    view.loadGymNetWork(locationNetwork.gymNetwork);
+}
+
+model.filterProgram = async () => {
     console.log("a")
     let filterProgram = []
     const respone = await firebase.firestore().collection('programs').get()
@@ -105,7 +128,7 @@ model.filter = async () => {
         }
         )
         console.log(3)
-        view.loadPrograms(filterProgram);
+        view.loadPrograms(filterProgram)
         return;
     }
     // chỉ nhập time
