@@ -42,6 +42,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
         case 'gym-network':
             document.getElementById('web').innerHTML = components.showNetwork
             model.loadGymNetwork();
+            break;
         case 'forumScreen' :
             document.getElementById('web').innerHTML=components.forumScreen
             model.loadForumPosts()

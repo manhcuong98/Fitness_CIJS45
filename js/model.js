@@ -140,7 +140,7 @@ model.listenForumCommentChange = () => {
         }
     })
 }
-model.filter = async () => {
+model.filterProgram = async () => {
     console.log("a")
     let filterProgram = []
     const respone = await firebase.firestore().collection('programs').get()
