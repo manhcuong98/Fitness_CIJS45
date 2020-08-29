@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp</title>
-
+    <link rel="stylesheet" href="../css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="../css/work.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/forum.css">
@@ -43,10 +44,13 @@
     <link rel="stylesheet" href="../css/boo/aos.css">
 
 </head>
-
 <body>
 
+    
+
+
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
         <div class="header">
             <div class="custom-container navbar-inner">
                 <ul class="navbar-items nav pull-left">
@@ -54,7 +58,9 @@
                         <div class="nav-item-inner">
                             <div class="main-logo">
                                 <a href="#" title="Stamin">
-                                    <img class="custom-logo img-responsive" src="" alt="Stamin" title="Stamin">
+                                    <img class="custom-logo img-responsive"
+                                        src=""
+                                        alt="Stamin" title="Stamin">
                                 </a>
                             </div>
                         </div>
@@ -69,19 +75,24 @@
                                 </li>
                                 <li class="menu-item" onclick="view.setActiveScreen('programs')">
                                     <a href="#" class="nav-link ">Working & Program</a>
-
+    
                                 </li>
                                 <li class="menu-item" onclick="view.setActiveScreen('gym-network')">
                                     <a href="#" class="nav-link ">Gym & Network</a>
                                 </li>
                                 <li class="menu-item" onclick="view.setActiveScreen('forumScreen')">
                                     <a href="#" class="nav-link ">Forum</a>
-
+    
                                 </li>
-
-                                <li class="menu-item" onclick="view.setActiveScreen('contactUsScreen')">
-                                    <a href="#" class="nav-link">Contact Us</a>
-                                    
+    
+                                <li class="menu-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Contact Us</a>
+                                    <ul role="menu" class=" dropdown-menu">
+                                        <li class="menu-item">
+                                            <a href="#" class="nav-link">Contact Us 1</a></li>
+                                        <li class="menu-item">
+                                            <a href="#" class="nav-link">Contact Us 2</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -98,7 +109,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="nav-item-inner">
-                                <div class="mini-cart-dropdown dropdown ">
+                                <div class="mini-cart-dropdown dropdown">
                                     <a href="#" class="mini-cart-item">
                                         <i class="fa fa-user-circle" aria-hidden="true"></i>
                                     </a>
@@ -108,10 +119,10 @@
                                                 <ul class="user-item" id="user-item">
                                                     <li onclick="view.setActiveScreen('loginScreen')">
                                                         <a href="#">Login</a>
-                                                    </li>
+                                                    </li >
                                                     <li onclick="view.setActiveScreen('registerScreen')">
                                                         <a href="#">Register</a>
-                                                    </li>
+                                                    </li >
                                                 </ul>
                                             </div>
                                         </li>
@@ -124,11 +135,42 @@
             </div>
         </div>
     </header>
-
-    <div id="web">
-        
-    </div>
+    <!-- <div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
     
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+              <h2 class="">Class Single Post</h2>
+              <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
+            </div>
+          </div>
+        </div>
+      
+      </div> -->
+
+    <!-- <a id="bgndVideo" class="player"
+            data-property="{videoURL:'https://www.youtube.com/watch?v=w-cRWOjlk8c',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:255, stopAt: 271, opacity:1}">
+        </a>
+
+        <div class="intro-section" id="home-section" style="background-color: #ccc;">
+            <div class="container">
+
+                <div class="row align-items-center">
+                    <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+                        <h1 class="mb-3">We Believe Little Things Matter</h1>
+                        <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci voluptate, optio praesentium. Ex, veniam, harum.</p>
+                        <p class="text-center">
+                            <a href="#" class="btn btn-outline-white py-3 px-5">Get Started</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+
+    
+    <div id="web"></div>
     <div class="footer">
         <footer>
             <div class="container">
@@ -256,8 +298,10 @@
             </div>
         </footer>
     </div>
+   
+    
 
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -288,13 +332,16 @@
 
     <script src="../js/jquery-carousel/main.js"></script>
 
+
+
+
+
     <script src="..//js/controller.js"></script>
     <script src="..//js/view.js"></script>
     <script src="..//js/model.js"></script>
     <script src="..//js/components.js"></script>
     <script src="..//js/index.js"></script>
-
-
+   
+   
 </body>
-
 </html>

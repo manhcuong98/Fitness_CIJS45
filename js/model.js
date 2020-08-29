@@ -22,7 +22,7 @@ model.login = async (data) => {
         }
 
     }
-    view.setActiveScreen('programs')
+    view.setActiveScreen('homeScreen')
 
 }
 model.register = (data) => {

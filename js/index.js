@@ -42,8 +42,9 @@ firebase.auth().onAuthStateChanged(function (user) {
       `
   }
 });
+
 init = () => {
-  view.setActiveScreen('programs')
+  view.setActiveScreen('homeScreen');
   //view.setActiveScreen('forumScreen')
 }
 window.onload = init
