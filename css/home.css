@@ -43,7 +43,7 @@
     left: auto;
     margin: 0;
     right: 0;
-    height: 80px;
+    height: max-content;
     width: 150px;
     padding: 20px 15px;
 }
@@ -69,3 +69,4 @@
     list-style-type: none;
     padding: inherit;
 }
+

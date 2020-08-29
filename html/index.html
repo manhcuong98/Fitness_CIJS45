@@ -12,11 +12,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-storage.js"></script>
     <link rel="stylesheet" href="../css/work.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/forum.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/network.css">
+    <link rel="stylesheet" href="..//css/register.css">
+
 </head>
 <body>
+
+
     <div class="header">
         <div class="custom-container navbar-inner">
             <ul class="navbar-items nav pull-left">
@@ -36,17 +44,17 @@
                 <li class="nav-item">
                     <div class="nav-item-inner">
                         <ul id="stamin-main-menu" class="nav stamin-main-menu">
-                            <li class="menu-item">
+                            <li class="menu-item" onclick="view.setActiveScreen('homeScreen')">
                                 <a href="#" class="nav-link ">Home</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item" onclick="view.setActiveScreen('programs')">
                                 <a href="#" class="nav-link ">Working & Program</a>
 
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item" onclick="view.setActiveScreen('gym-network')">
                                 <a href="#" class="nav-link ">Gym & Network</a>
                             </li>
-                            <li class="menu-item">
+                            <li class="menu-item" onclick="view.setActiveScreen('forumScreen')">
                                 <a href="#" class="nav-link ">Forum</a>
 
                             </li>
@@ -76,19 +84,19 @@
                     <li class="nav-item">
                         <div class="nav-item-inner">
                             <div class="mini-cart-dropdown dropdown">
-                                <a href="" class="mini-cart-item">
+                                <a href="#" class="mini-cart-item">
                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu cart-dropdown-menu">
                                     <li class="cart-item">
                                         <div>
-                                            <ul class="user-item">
-                                                <li>
-                                                    <a href="../html/temp_login.html">Login</a>
-                                                </li>
-                                                <li>
-                                                    <a href="../html/temp_register.html">Register</a>
-                                                </li>
+                                            <ul class="user-item" id="user-item">
+                                                <li onclick="view.setActiveScreen('loginScreen')">
+                                                    <a href="#">Login</a>
+                                                </li >
+                                                <li onclick="view.setActiveScreen('registerScreen')">
+                                                    <a href="#">Register</a>
+                                                </li >
                                             </ul>
                                         </div>
                                     </li>
@@ -100,9 +108,7 @@
             </ul>
         </div>
     </div>
-    <div id="web">
-         
-    </div>
+    <div id="web"></div>
     <div class="footer">
         <footer>
             <div class="container">

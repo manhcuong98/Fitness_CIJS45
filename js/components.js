@@ -138,7 +138,7 @@ components.loginScreen =`
             <figure>
                 <img src="../image/image-style/81a29540400159.577dcf3623a88.gif"  alt="">
             </figure>
-            <a href="#" class="signup-image-link" class="redirect-to-register">Create an account</a>
+            <a href="#" class="signup-image-link" class="redirect-to-register" onclick="view.setActiveScreen('registerScreen')">Create an account</a>
         </div>
         
         <div class="signin-form">

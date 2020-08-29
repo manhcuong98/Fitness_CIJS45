@@ -7,9 +7,9 @@ view.setActiveScreen = async (screenName, program = undefined) => {
     switch (screenName) {
         case 'loginScreen':
             document.getElementById('web').innerHTML = components.loginScreen;
-            document.getElementById('redirect-to-register').addEventListener('click', (e) => {
-                view.setActiveScreen('registerScreen')
-            })
+            // document.getElementById('redirect-to-register').addEventListener('click', (e) => {
+            //     view.setActiveScreen('registerScreen')
+            // })
             const loginForm = document.getElementById('login-form');
             loginForm.addEventListener('submit', (event) => {
                 event.preventDefault();
@@ -32,6 +32,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                     password: registerForm.password.value,
                     confirmPassword: registerForm.confirmPassword.value
                 };
+                console.log(data)
                 controller.register(data);
             })
             document.getElementById('redirect-to-login').addEventListener('click', () => {
