@@ -172,6 +172,7 @@ view.showOneForumPost =(post) =>{
                 console.log(sendForumCommentForm.comment.value)
                 if (sendForumCommentForm.comment.value.trim() != '') {
                 model.addForumComment(post.id,sendForumCommentForm.comment.value,model.currentUser.email)  
+                console.log("a")
                 } 
                 sendForumCommentForm.comment.value = ""
             }) 

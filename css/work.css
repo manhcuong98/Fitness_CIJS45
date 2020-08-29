@@ -12,7 +12,7 @@
 .program-container .list-program .program {
   width: 31.43%;
   height: 440px;
-  border: 1px solid black;
+  border: 1px solid #dbdbdb;
   margin: 10px;
   cursor: pointer;
 }
@@ -118,4 +118,10 @@
     border: 0.5px solid gray;
     padding: 10px;
     box-shadow: 11px 7px 9px #888888;
+}
+#program-style {
+  background-color: #F8F8F8;
+}
+#program-style .program {
+  background-color: #fff;
 }

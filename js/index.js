@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     console.log(model.currentUser)
     document.getElementById('user-item').innerHTML =
       `
-      <li onclick = "firebase.auth().signOut();">
+      <li onclick = "model.logout()">
         <a href = "#">Log out</a> </li>
       `
     //view.setActiveScreen(`chatScreen`)
