@@ -16,7 +16,10 @@ firebase.initializeApp(firebaseConfig);
 // }
 
 init = () => {
-  view.setActiveScreen('programs')
-  //view.setActiveScreen('forumScreen')
+  // view.setActiveScreen('programs')
+ //view.setActiveScreen('forumScreen')
 }
 window.onload = init 
+function getFileUrl(fileRef) {
+  return `https://firebasestorage.googleapis.com/v0/b/${fileRef.bucket}/o/${encodeURIComponent(fileRef.fullPath)}?alt=media`
+}

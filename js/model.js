@@ -225,3 +225,22 @@ model.filterProgram = async () => {
         return;
     }
 }
+model.uploadPost = (file, contentUpload, titleUpload) => {
+    console.log(file)
+    const fileName = file.name
+    const filePath = `forum/${fileName}`
+    const fileRef = firebase.storage().ref().child(filePath)
+    fileRef.put(file).then(res => {
+        const newPost={
+            title: titleUpload,
+            content: contentUpload,
+            img: getFileUrl(fileRef),
+            comments: []
+        }
+        firebase.firestore().collection('forum').add(newPost)
+        document.getElementById('web').innerHTML=components.forumScreen
+            model.loadForumPosts()
+            model.listenForumCommentChange()
+    console.log("done");
+    })
+  }
