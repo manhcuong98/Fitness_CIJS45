@@ -138,7 +138,7 @@ components.loginScreen =`
             <figure>
                 <img src="../image/image-style/81a29540400159.577dcf3623a88.gif"  alt="">
             </figure>
-            <a href="#" class="signup-image-link" class="redirect-to-register">Create an account</a>
+            <a href="#" class="signup-image-link" class="redirect-to-register" onclick="view.setActiveScreen('registerScreen')">Create an account</a>
         </div>
         
         <div class="signin-form">
@@ -147,11 +147,12 @@ components.loginScreen =`
                     <div class="form-group">
                         <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                         <input type="text" name="email" id="name" placeholder="Email" />
-                        
+                        <div class="error" id="emailError"></div>
                     </div>
                     <div class="form-group">
                         <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                         <input type="password" name="password" id="your_pass" placeholder="Password" />
+                        <div class="error" id="passwordError"></div>
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -197,30 +198,14 @@ components.registerScreen = `
                 <div class="form-group">
                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                     <input type="password" name="password" id="pass" placeholder="Password" />
+                    <div class="error" id="password-error"></div>
                 </div>
                 <div class="form-group">
                     <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
                     <input type="password" name="confirmPassword" id="re_pass" placeholder="Repeat your password" />
+                    <div class="error" id="confirmPassword-error"></div>
                 </div>
-                <div class="form-group styleGender">
-                    <div class="flex1">
-                        <label for="re-pass"><i class="zmdi zmdi-male-female"></i></label>
-                        <select name="Sex" id="dropdownid" aria-placeholder="sex" required>
-                            <option value="" disabled="disabled" selected="selected">Gender</option>
-                            <i class="zmdi zmdi-chevron-down"></i>
-                            <option value="0">Male</option>
-                            <option value="1">Female</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group styleForm">
-                    <div style="margin-right: 5px;">
-                        <input type="text" placeholder="Height">
-                    </div>
-                    <div style="margin-left: 5px;">
-                        <input type="text" placeholder="Weight">
-                    </div>
-                </div>
+                
 
                 <div class="form-group">
                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />

@@ -2,11 +2,47 @@ const model = {}
 model.programs = [];
 model.selectedProgram = undefined;
 model.getComment = undefined
-model.currentForumComment=undefined
+model.currentForumComment = undefined
 
-model.forumPosts=[]
-model.selectedForumPost=undefined
+model.forumPosts = []
+model.selectedForumPost = undefined
 
+
+model.login = async (data) => {
+    try {
+        await firebase.auth().signInWithEmailAndPassword(data.email, data.password)
+
+    } catch (err) {
+        console.log(err.message);
+        if (err.code === 'auth/wrong-password') {
+            document.getElementById('passwordError').innerHTML = err.message
+        }
+        if (err.code === 'auth/user-not-found') {
+            document.getElementById('emailError').innerHTML = err.message
+        }
+
+    }
+    view.setActiveScreen('programs')
+
+}
+model.register = (data) => {
+    firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then((res) => {
+        firebase.auth().currentUser.updateProfile({
+            displayName: data.yourName
+        })
+        firebase.auth().currentUser.sendEmailVerification()
+        alert("The email has been registered, please check your email and verfify your account")
+        view.setActiveScreen('loginScreen')
+    }).catch((err) => {
+        console.log(err.code);
+        if (err.code === 'auth/email-already-in-use') {
+            document.getElementById('email-error').innerText = err.message;
+        }
+        if (err.code === 'auth/weak-password') {
+            document.getElementById('passwordError').innerText = err.message
+        }
+    })
+}
 getDataFromDoc = (doc) => {
     const data = doc.data()
     data.id = doc.id
@@ -15,7 +51,7 @@ getDataFromDoc = (doc) => {
 getDataFromDocs = (docs) => {
     return docs.map(item => getDataFromDoc(item))
 }
-model.loadForumPosts =async () => {
+model.loadForumPosts = async () => {
     const respone = await firebase.firestore().collection('forum').get()
     model.forumPosts = await getDataFromDocs(respone.docs)
     view.loadForumPosts(model.forumPosts)
@@ -108,7 +144,7 @@ model.loadForumComments = async (id) => {
     if (model.currentForumComment.comments.length > 0) {
         //model.comments = model.conversations[0]
         view.loadCurrentForumComments(model.currentForumComment.comments)
-       
+
     }
 }
 model.addForumComment = (id, Comment, User) => {
@@ -118,7 +154,7 @@ model.addForumComment = (id, Comment, User) => {
             user: User
         })
     }
-        firebase.firestore().collection('forum').doc(id).update(dataUpdate)
+    firebase.firestore().collection('forum').doc(id).update(dataUpdate)
 }
 model.listenForumCommentChange = () => {
     let isFirstRun = true;
@@ -134,7 +170,7 @@ model.listenForumCommentChange = () => {
             if (type == "modified") {
                 const docData = getDataFromDoc(oneChange.doc)
                 const lastComment = docData.comments[docData.comments.length - 1]
-                view.addForumComment(lastComment.comment,lastComment.user)
+                view.addForumComment(lastComment.comment, lastComment.user)
                 view.scrollToEnd()
             }
         }
@@ -231,16 +267,16 @@ model.uploadPost = (file, contentUpload, titleUpload) => {
     const filePath = `forum/${fileName}`
     const fileRef = firebase.storage().ref().child(filePath)
     fileRef.put(file).then(res => {
-        const newPost={
+        const newPost = {
             title: titleUpload,
             content: contentUpload,
             img: getFileUrl(fileRef),
             comments: []
         }
         firebase.firestore().collection('forum').add(newPost)
-        document.getElementById('web').innerHTML=components.forumScreen
-            model.loadForumPosts()
-            model.listenForumCommentChange()
-    console.log("done");
+        document.getElementById('web').innerHTML = components.forumScreen
+        model.loadForumPosts()
+        model.listenForumCommentChange()
+        console.log("done");
     })
-  }
+}

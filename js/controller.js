@@ -1,71 +1,49 @@
 let controller = {}
-
+controller.login = (data) => {
+    let i = 0;
+    document.getElementById("passwordError").innerHTML = ""
+    document.getElementById("emailError").innerHTML = ""
+    if (data.email === "" || data.email.trim() === "") {
+        document.getElementById('emailError').innerHTML = "Please input your email"
+        i++;
+    }
+    if (data.password === "" || data.password.trim() === "") {
+        document.getElementById('passwordError').innerHTML = "Please input your password"
+        i++;
+    }
+    if (i > 0) return;
+    model.login(data)
+}
 controller.register = (data) => {
-    if(data.firstName.trim() === ''){
-        document.getElementById('first-name-error').innerText = 'Plese input First name' ;
-    } 
-    else{
-        document.getElementById('first-name-error').innerText ='' ; 
-    };
-    if(data.lastName.trim() === ''){
-        document.getElementById('last-name-error').innerText = 'Plese input Last name' ;
-    } 
-    else{
-        document.getElementById('last-name-error').innerText ='' ; 
-    } ;
-    if(data.email.trim() === ''){
-        document.getElementById('email-error').innerText = 'Plese input Email' ;
-    } 
-    else{
-        document.getElementById('email-error').innerText ='' ; 
-    } ;
-
-    if(data.password.trim() ===''){
-        document.getElementById('password-error').innerText = 'Plese input Password' ;
-    } 
-    else{
-        document.getElementById('password-error').innerText ='' ; 
+    let i = 0;
+    document.getElementById('your-name-error').innerHTML = ""
+    document.getElementById('email-error').innerHTML = ""
+    document.getElementById('password-error').innerHTML = ""
+    document.getElementById('confirmPassword-error').innerHTML = ""
+    if (data.yourName === "" || data.yourName.trim() === "") {
+        document.getElementById('your-name-error').innerHTML = "Please input your name"
+        i++;
     }
-    if(data.confirmPassword.trim() === ''){
-        document.getElementById('confirm-password-error').innerText = 'Plese input Confirm password' ;
-    } 
-    else if(data.password !== data.confirmPassword){
-        document.getElementById('confirm-password-error').innerText ="Password didn't match"
+    if (data.email === "" || data.email.trim() === "") {
+        document.getElementById('email-error').innerHTML = "Please input your email"
+        i++;
     }
-    else {
-        document.getElementById('confirm-password-error').innerText ='' ; 
-    } ;
-    if(data.firstName !== '' && data.lastName !== ''&& data.email !== '' && data.password !== '' &&
-       data.confirmPassword !=='' && data.password ===data.confirmPassword){
-           model.register(data);
-       }
-    
-   
-};
-
-controller.login = (dataLogin) => {
-    if(dataLogin.email === ''){
-        document.getElementById('email-error').innerText = 'Plese input Email' ;
-    } 
-    else{
-        document.getElementById('email-error').innerText ='' ; 
-    } ;
-
-    if(dataLogin.password ===''){
-        document.getElementById('password-error').innerText = 'Plese input Password' ;
-    } 
-    else{
-        document.getElementById('password-error').innerText ='' ; 
+    if (data.password === "" || data.password.trim() === "") {
+        document.getElementById('password-error').innerHTML = "Please input your password"
+        i++;
     }
-    if(dataLogin.email !== '' &&
-    dataLogin.password !== '')
-    {
-        model.login(dataLogin);
+    if (data.confirmPassword === "" || data.confirmPassword.trim() === "") {
+        document.getElementById('confirmPassword-error').innerHTML = "Please confirm your password"
+        i++;
     }
-};
+    if (data.password != data.confirmPassword) {
+        document.getElementById('confirmPassword-error').innerHTML = "Your confirmation of password is incorrect, please try again"
+        i++;
+    }
+    if (i > 0) return;
 
-
-
+    model.register(data)
+}
 controller.changeGender = (num) => {
     if (num == 0) return "Male";
     if (num == 1) return "Female"
