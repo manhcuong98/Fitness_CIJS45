@@ -19,3 +19,6 @@ init = () => {
   view.setActiveScreen('forumScreen')
 }
 window.onload = init 
+function getFileUrl(fileRef) {
+  return `https://firebasestorage.googleapis.com/v0/b/${fileRef.bucket}/o/${encodeURIComponent(fileRef.fullPath)}?alt=media`
+}

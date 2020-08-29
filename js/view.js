@@ -27,8 +27,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             registerForm.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const data = {
-                    firstName: registerForm.firstName.value,
-                    lastName: registerForm.lastName.value,
+                    yourName: registerForm.yourName.value,
                     email: registerForm.email.value,
                     password: registerForm.password.value,
                     confirmPassword: registerForm.confirmPassword.value
@@ -56,26 +55,47 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             `
             document.getElementsByClassName('text-des')[0].innerHTML = text
             let temp = document.getElementsByClassName('text-des')[0]
-            
+
             temp.innerHTML += `<div class= "text" style="font-weight:Bold" >Description: </div>`
             for (let i = 0; i < program.des.length; i++) {
                 temp.innerHTML += `<div class = "text-detail">- ${program.des[i]}.<div>`
             }
             const sendCommentForm = document.getElementById('send-comment-form')
-            sendCommentForm.addEventListener('submit' , (event) => {
+            sendCommentForm.addEventListener('submit', (event) => {
                 event.preventDefault();
                 console.log(sendCommentForm.comment.value)
                 const date = new Date().toLocaleString('en-GB', { timeZone: "Asia/Bangkok" }).substr(0, 20).replace('T', ' ')
-                model.addComment(program.id,sendCommentForm.comment.value,date,"Undefined")
+                model.addComment(program.id, sendCommentForm.comment.value, date, "Undefined")
 
-                sendCommentForm.comment.value = "" 
+                sendCommentForm.comment.value = ""
             })
             model.listenCommentChange("programs")
+            break;
+
+        case 'gym-network':
+            document.getElementById('web').innerHTML = components.showNetwork
+            model.loadGymNetwork();
             break;
         case 'forumScreen' :
             document.getElementById('web').innerHTML=components.forumScreen
             model.loadForumPosts()
-            model.listenForumCommentChange()         
+            model.listenForumCommentChange()
+            
+            const uploadPostForm = document.getElementById('upload-post')
+            uploadPostForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const files = uploadPostForm.file.files
+                const contentUpload=uploadPostForm.content.value.trim()
+                const titleUpload=uploadPostForm.title.value.trim()
+                if(files.length === 0 || contentUpload==="" || titleUpload==="") {
+                // alert('Please choose file!')
+                console.log('nhap thieu');
+                } 
+                else {
+                    console.log('nhap du');
+                    model.uploadPost(files[0], contentUpload, titleUpload)
+                }
+            })
             break;    
     }
 }
@@ -102,6 +122,7 @@ view.loadForumPosts = (forumPosts) => {
         })
     }
 }
+
 
 view.loadListTitles =(forumPosts) =>{
     for(let post of forumPosts){
@@ -156,16 +177,16 @@ view.loadPrograms = (programs) => {
         `
         document.querySelector('.list-program').appendChild(child)
         child.addEventListener('click', () => {
-            
+
             view.setActiveScreen('a-program', program)
 
         })
     }
-    
+
 }
 view.loadCurrentComments = (currentComment) => {
-    
-    for(let i=0 ; i<currentComment.length ;i++) {
+
+    for (let i = 0; i < currentComment.length; i++) {
         let commentWrapper = document.createElement('div')
         commentWrapper.classList.add('program-comment')
         commentWrapper.innerHTML = `
@@ -179,19 +200,32 @@ view.loadCurrentComments = (currentComment) => {
     }
     view.scrollToEndElement()
 }
-view.addComment = (comment,user,date) => {
+view.addComment = (comment, user, date) => {
     let commentWrapper = document.createElement('div')
-        commentWrapper.classList.add('program-comment')
-        commentWrapper.innerHTML = `
+    commentWrapper.classList.add('program-comment')
+    commentWrapper.innerHTML = `
         <div id="information">
         <div id="user">${user}</div>
         <div id="date">${date}</div>
         </div>
         <div id="content">${comment}</div>
         `
-        document.querySelector('.list-comment').appendChild(commentWrapper)
-        view.scrollToEndElement()
+    document.querySelector('.list-comment').appendChild(commentWrapper)
+    view.scrollToEndElement()
 }
+
+view.loadGymNetWork = (arr) => {
+    let body = document.getElementById('list-network');
+    body.innerHTML = "";
+    let list = '';
+    for (let i = 0; i < arr.length; i++) {
+        list += `<h5>${i + 1}. ${arr[i].name}</h5>
+    <div><img width=80% height= 500 src="${arr[i].img}" alt=""></div>
+    <p>Address: ${arr[i].address}</p>`
+    }
+    body.innerHTML += list;
+}
+
 
 view.scrollToEndElement = () => {
     const element = document.querySelector('.list-comment')
