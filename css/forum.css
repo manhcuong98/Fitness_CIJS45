@@ -10,7 +10,7 @@
 }
 .forum-containner .create-new-post{
     width: 800px;
-    margin-left: 10%;
+    margin-left: calc(10% + 25px);
     height: max-content;
     border: 1px solid;
     background-color: #fff;

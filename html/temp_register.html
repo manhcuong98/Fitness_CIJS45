@@ -108,6 +108,7 @@
     </div>
 
     <!-- Sign up form -->
+
     <section class="signup">
         <div class="container1">
             <div class="signup-content">
@@ -118,7 +119,7 @@
                     <form method="POST" class="register-form" id="register-form">
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                            <input type="text" name="yourName" id="name" placeholder="Your Name" />
                         </div>
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -126,11 +127,12 @@
                         </div>
                         <div class="form-group">
                             <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="pass" id="pass" placeholder="Password" />
+                            <input type="password" name="password" id="pass" placeholder="Password" />
                         </div>
                         <div class="form-group">
                             <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                            <input type="password" name="confirmPassword" id="re_pass"
+                                placeholder="Repeat your password" />
                         </div>
                         <div class="form-group styleGender">
                             <div class="flex1">
@@ -166,7 +168,7 @@
                 <div class="signup-image">
                     <figure><img src="../image/image-style/81a29540400159.577dcf3623a88.gif" alt="sing up image">
                     </figure>
-                    <a href="#" class="signup-image-link">I am already member</a>
+                    <a href="#" class="signup-image-link" id="redirect-to-login">I am already member</a>
                 </div>
             </div>
         </div>
