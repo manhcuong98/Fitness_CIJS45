@@ -3,10 +3,11 @@ model.programs = [];
 model.selectedProgram = undefined;
 model.getComment = undefined
 model.currentForumComment = undefined
-
+model.currentUser = undefined
 model.forumPosts = []
 model.selectedForumPost = undefined
-
+model.forumChange = undefined
+model.commentChange = undefined
 
 model.login = async (data) => {
     try {
@@ -64,6 +65,7 @@ model.loadprograms = async () => {
     view.loadPrograms(model.programs)
 }
 model.addComment = (id, Comment, Date, User) => {
+
     const dataUpdate = {
         comments: firebase.firestore.FieldValue.arrayUnion({
             comment: Comment,
@@ -72,6 +74,7 @@ model.addComment = (id, Comment, Date, User) => {
         })
     }
     if (Comment != '' || Comment.trim() != '') {
+
         firebase.firestore().collection('programs').doc(id).update(dataUpdate)
 
         //console.log("aaa")
@@ -91,7 +94,7 @@ model.loadComments = async (id) => {
 model.listenCommentChange = (collection) => {
     let isFirstRun = true;
     console.log('g')
-    firebase.firestore().collection(collection).onSnapshot((res) => {
+    model.commentChange = firebase.firestore().collection(collection).onSnapshot((res) => {
         console.log("alo")
         if (isFirstRun) {
             isFirstRun = false;
@@ -158,7 +161,7 @@ model.addForumComment = (id, Comment, User) => {
 }
 model.listenForumCommentChange = () => {
     let isFirstRun = true;
-    firebase.firestore().collection('forum').onSnapshot((res) => {
+   model.forumChange = firebase.firestore().collection('forum').onSnapshot((res) => {
         if (isFirstRun) {
             isFirstRun = false;
             return;
@@ -279,4 +282,15 @@ model.uploadPost = (file, contentUpload, titleUpload) => {
         model.listenForumCommentChange()
         console.log("done");
     })
+}
+model.logout = () => {
+    if(model.commentChange) {
+        model.commentChange()
+    }
+    if(model.forumChange) {
+        model.forumChange()
+    }
+    // model.()
+    firebase.auth().signOut();
+
 }

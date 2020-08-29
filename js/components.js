@@ -13,8 +13,8 @@ components.programsScreen = `
       
       </div>
 
+<div id="program-style">
 <form style="margin-left: 24cm;" class="form-inline">
-<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choose</label>
 <select class="custom-select my-1 mr-sm-2" id="calo">
   <option selected >Calories</option>
   <option value="50">~50</option>
@@ -43,7 +43,7 @@ components.programsScreen = `
 </form>
     <div class="program-container">
         <div class="list-program"></div>
-    </div>
+    </div> </div>
 `
 components.showProgram = `
 <div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
@@ -77,35 +77,31 @@ components.showProgram = `
         </div>
     
 `
-components.showNetwork =
-    `<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
+components.showNetwork = 
+`
+<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
     
-<div class="container">
-  <div class="row align-items-center justify-content-center text-center">
-    <div class="col-md-7">
-      <h2 class="">Class Single Post</h2>
-      <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
-    </div>
-  </div>
-</div>
-
-</div>
-
-
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+              <h2 class="">Class Single Post</h2>
+              <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+<hr>
 <form class="form-inline" style="margin-left: 25cm;">
-<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Your location: </label>
 <select class="custom-select my-1 mr-sm-2" id="location">
   <option selected>Vietnam</option>
   <option value="1">Hanoi</option>
   <option value="2">Ho Chi Minh City</option>
-</select>
+</select> 
 
 <button onclick="model.gymFindLocation()" type="button" class="btn btn-primary my-1">Submit</button>
 </form>
-<div>
-<img style="width: 100%; height: 15cm;" src="..//gym/anh-nen-4.jpg" alt="">
-</div>
-<hr>
+<br> <br>
 
 <div class="network-container" >
 <h4 style="font-size: 18px;">ARE YOU AIMING TO BECOME MORE TONED AND BUILD SOME MUSCLE OR DO YOU JUST NEED TO DE-STRESS AFTER WORK?</h4>
