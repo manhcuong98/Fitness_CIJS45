@@ -14,12 +14,39 @@ firebase.initializeApp(firebaseConfig);
 // function programDetail(id) {
 //   console.log(id)
 // }
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user && user.emailVerified) {
+    model.currentUser = {
+      displayName: user.displayName,
+      email: user.email
+    }
+    document.getElementById('user-item').innerHTML =
+      `
+      <li onclick = "firebase.auth().signOut();">
+        <a href = "#">Log out</a> </li>
+      `
+    //view.setActiveScreen(`chatScreen`)
+    console.log("aaaa")
 
+  } else {
+    //view.setActiveScreen('loginScreen');
+    console.log("bbbb")
+    document.getElementById('user-item').innerHTML =
+      `
+      <li onclick="view.setActiveScreen('loginScreen')">
+                                                    <a href="#">Login</a>
+                                                </li>
+                                                <li onclick="view.setActiveScreen('registerScreen')">
+                                                <a href="#">Register</a>
+                                            </li>                         
+      `
+  }
+});
 init = () => {
-   view.setActiveScreen('programs')
- //view.setActiveScreen('forumScreen')
+  view.setActiveScreen('programs')
+  //view.setActiveScreen('forumScreen')
 }
-window.onload = init 
+window.onload = init
 function getFileUrl(fileRef) {
   return `https://firebasestorage.googleapis.com/v0/b/${fileRef.bucket}/o/${encodeURIComponent(fileRef.fullPath)}?alt=media`
 }
