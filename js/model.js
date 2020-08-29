@@ -3,16 +3,7 @@ model.programs = [];
 model.selectedProgram = undefined;
 model.getComment = undefined
 model.currentForumComment=undefined
-// firebase.firestore().collection("programs").get().then(function(querySnapshot) {
-//     querySnapshot.forEach(function(doc) {
-//         // doc.data() is never undefined for query doc snapshots
-//         //console.log(doc.id, " => ", doc.data());
-//         //doc.data().id = doc.id;
-//         let temp = doc.data();
-//         temp.id = doc.id
-//         model.programs.push(temp)
-//     });
-// });
+
 model.forumPosts=[]
 model.selectedForumPost=undefined
 
@@ -84,6 +75,30 @@ model.listenCommentChange = (collection) => {
         }
     })
 }
+model.loadGymNetwork = async () => {
+    const respone = await firebase.firestore().collection("network").doc('D7LCMIcgD20m5lVArTZ2').get()
+    //console.log(respone)
+    model.getNetwork = await getDataFromDoc(respone)
+    //console.log(model.getNetwork.gymNetwork)
+    view.loadGymNetWork(model.getNetwork.gymNetwork)
+}
+model.gymFindLocation = async () => {
+    const respone = await firebase.firestore().collection("network").doc('D7LCMIcgD20m5lVArTZ2').get()
+    let locationNetwork = await getDataFromDoc(respone)
+    let location = +document.getElementById("location").value;
+    console.log(location);
+    if (location == 1 || location == 2) {
+        let result = locationNetwork.gymNetwork.filter(function (value) {
+            return value.city == location;
+        }
+        )
+        view.loadGymNetWork(result);
+        return;
+    }
+    view.loadGymNetWork(locationNetwork.gymNetwork);
+}
+
+
 
 model.loadForumComments = async (id) => {
     const respone = await firebase.firestore().collection("forum").doc(id).get()
@@ -125,7 +140,7 @@ model.listenForumCommentChange = () => {
         }
     })
 }
-model.filter = async () => {
+model.filterProgram = async () => {
     console.log("a")
     let filterProgram = []
     const respone = await firebase.firestore().collection('programs').get()
@@ -156,7 +171,7 @@ model.filter = async () => {
         }
         )
         console.log(3)
-        view.loadPrograms(filterProgram);
+        view.loadPrograms(filterProgram)
         return;
     }
     // chỉ nhập time

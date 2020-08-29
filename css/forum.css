@@ -1,6 +1,6 @@
 
 .main{
-    /* border: 1px solid ; */
+    border: 1px solid ;
     margin: 0px 10%;
     height: max-content;
     display: flex;
@@ -39,7 +39,7 @@
 .forum-containner .aside-left{
     flex-grow: 1;
     padding: 25px 60px 10px 25px;
-    /* border-right: 1px solid ; */
+    border-right: 1px solid ;
 }
 .forum-containner .aside-left .forum-post{
     width: 800px;
@@ -88,9 +88,9 @@
     margin-bottom: 10px;
     overflow-y: auto;
 }
-.forum-containner .aside-left .forum-post image{
+.forum-containner .aside-left  img{
     /* background-size: cover; */
-    width: inherit;
+    width: 798px;
     height: 490px;
     margin: 0px;
 }
@@ -107,7 +107,7 @@
     cursor: pointer;
 }
 .forum-containner .aside-left .forum-post p{
-    /* margin: 0px 20px 20px 20px; */
+    margin: 0px 20px 20px 20px;
     height: 100px;
     font-size: 20px;
     line-height: 25px;

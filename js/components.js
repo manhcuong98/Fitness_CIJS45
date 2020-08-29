@@ -26,7 +26,7 @@ components.programsScreen = `
   <option value="1">Female</option>
   <option value="2" >Both</option>
 </select>
-<button type="button" class="btn btn-primary" onclick="model.filter()">Submit</button>
+<button type="button" class="btn btn-primary" style="background-color:#c76ddd;" onclick="model.filterProgram()">Submit</button>
 </form>
     <div class="program-container">
         <div class="list-program"></div>
@@ -50,6 +50,33 @@ components.showProgram = `
             </div>
         </div>
     
+`
+components.showNetwork = 
+`
+<form class="form-inline" style="margin-left: 25cm;">
+<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Your location: </label>
+<select class="custom-select my-1 mr-sm-2" id="location">
+  <option selected>Vietnam</option>
+  <option value="1">Hanoi</option>
+  <option value="2">Ho Chi Minh City</option>
+</select>
+
+<button onclick="model.gymFindLocation()" type="button" class="btn btn-primary my-1">Submit</button>
+</form>
+<div>
+<img style="width: 100%; height: 15cm;" src="..//gym/anh-nen-4.jpg" alt="">
+</div>
+<hr>
+
+<div class="network-container" >
+<h4 style="font-size: 18px;">ARE YOU AIMING TO BECOME MORE TONED AND BUILD SOME MUSCLE OR DO YOU JUST NEED TO DE-STRESS AFTER WORK?</h4>
+<p>Going to the gym works out differently for each us. Whatever your goal NL Leisure gyms are equipped to help you reach it.</p>
+<p>Our gym facilities are packed with the latest cardio, strength and weights equipment. They're staffed by instructors who can help you get the most from them. With new equipment being rolled out at sports centres across the area, NL Leisure gyms are shaping up nicely.</p>
+<p>Would you like to get your heart pumping? You'll find a huge range of cardio equipment from climbing machines and exercise bikes to rowing machines and treadmills. If you're in the business of building muscle, we've made light work of assembling the best kit from barbells and dumbbells to kettlebells and medicine balls. We've also got to the core of strength and conditioning with the latest CrossFit and resistance equipment.</p>
+<h4 style="font-size: 18px">ARE YOU READY TO GET STARTED? AS SOON AS YOU'VE COMPLETED YOUR INDUCTION YOU'LL BE READY TO TEST YOUR BODY TO THE LIMIT.</h4>
+<p>Sign up to be an NL Leisure member and make the most of your defining moments at the gym.</p>
+<div id="list-network"></div>
+</div>
 `
 components.forumScreen =`
 <div class="forum-containner">
