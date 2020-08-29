@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig);
 // }
 
 init = () => {
-  // view.setActiveScreen('programs')
+   view.setActiveScreen('programs')
  //view.setActiveScreen('forumScreen')
 }
 window.onload = init 
