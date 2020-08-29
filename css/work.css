@@ -51,7 +51,7 @@
 .showProgram .des {
   display: flex;
   margin: 0px 100px;
-  height: 400px;
+  height: max-content;
 }
 .showProgram .des .message-des {
   width: 50%;
@@ -106,10 +106,9 @@
 }
 #information {
   display: flex;
+  justify-content: space-between;
 }
-#information #date {
-  margin-left: 350px;
-}
+
 .item {
     border: 0.5px solid gray;
     padding: 10px;

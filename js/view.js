@@ -66,7 +66,11 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 event.preventDefault();
                 console.log(sendCommentForm.comment.value)
                 const date = new Date().toLocaleString('en-GB', { timeZone: "Asia/Bangkok" }).substr(0, 20).replace('T', ' ')
-                model.addComment(program.id, sendCommentForm.comment.value, date, "Undefined")
+                if(model.currentUser===undefined) {
+                    alert("Please login to comment")
+                    return
+                }
+                model.addComment(program.id, sendCommentForm.comment.value, date, model.currentUser.email)
 
                 sendCommentForm.comment.value = ""
             })
@@ -83,8 +87,14 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             model.listenForumCommentChange()
             
             const uploadPostForm = document.getElementById('upload-post')
+            
             uploadPostForm.addEventListener('submit', (e) => {
                 e.preventDefault()
+                if(model.currentUser===undefined) {
+                    alert("Please login to uploadFile")
+                    return
+                }
+               
                 const files = uploadPostForm.file.files
                 const contentUpload=uploadPostForm.content.value.trim()
                 const titleUpload=uploadPostForm.title.value.trim()
@@ -154,9 +164,14 @@ view.showOneForumPost =(post) =>{
     const sendForumCommentForm = document.getElementById('send-forum-comment-form')
             sendForumCommentForm.addEventListener('submit' , (event) => {
                 event.preventDefault();
+                if(model.currentUser===undefined) {
+                    alert("Please login to comment")
+                    return
+                }
+                
                 console.log(sendForumCommentForm.comment.value)
                 if (sendForumCommentForm.comment.value.trim() != '') {
-                model.addForumComment(post.id,sendForumCommentForm.comment.value,"no name")  
+                model.addForumComment(post.id,sendForumCommentForm.comment.value,model.currentUser.email)  
                 } 
                 sendForumCommentForm.comment.value = ""
             }) 
