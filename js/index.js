@@ -20,6 +20,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       displayName: user.displayName,
       email: user.email
     }
+    console.log(model.currentUser)
     document.getElementById('user-item').innerHTML =
       `
       <li onclick = "firebase.auth().signOut();">
@@ -29,6 +30,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     console.log("aaaa")
 
   } else {
+    model.currentUser = undefined
     //view.setActiveScreen('loginScreen');
     console.log("bbbb")
     document.getElementById('user-item').innerHTML =

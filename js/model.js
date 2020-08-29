@@ -3,7 +3,7 @@ model.programs = [];
 model.selectedProgram = undefined;
 model.getComment = undefined
 model.currentForumComment = undefined
-
+model.currentUser = undefined
 model.forumPosts = []
 model.selectedForumPost = undefined
 
@@ -64,6 +64,7 @@ model.loadprograms = async () => {
     view.loadPrograms(model.programs)
 }
 model.addComment = (id, Comment, Date, User) => {
+      
     const dataUpdate = {
         comments: firebase.firestore.FieldValue.arrayUnion({
             comment: Comment,
@@ -72,6 +73,7 @@ model.addComment = (id, Comment, Date, User) => {
         })
     }
     if (Comment != '' || Comment.trim() != '') {
+        
         firebase.firestore().collection('programs').doc(id).update(dataUpdate)
 
         //console.log("aaa")
