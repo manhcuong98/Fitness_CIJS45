@@ -584,6 +584,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   z-index: 100;
   width: 100%; }
+  
   .sticky-wrapper + .site-blocks-cover {
     margin-top: 96px; }
   .sticky-wrapper .site-navbar {
@@ -597,6 +598,15 @@ h1, h2, h3, h4, h5,
       .sticky-wrapper .site-navbar .site-menu > li > a.active {
         color: #fff;
         position: relative; }
+/********************* scroll ******************/
+.sticky-wrapper .site-navbar .navMenu .stamin-main-menu> li > a.active {
+    color: #333;
+    position: relative; }
+/* .sticky-wrapper .site-navbar .navMenu .nav-item .fix1 > a.active i{
+    color: #333 !important;
+    position: relative; } */
+
+  
         .sticky-wrapper .site-navbar .site-menu > li > a.active:after {
           height: 2px;
           background: #fff;
@@ -615,11 +625,26 @@ h1, h2, h3, h4, h5,
       color: #000; }
     .sticky-wrapper.is-sticky .site-navbar .site-menu > li {
       display: inline-block; }
+
       .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a {
         padding: 5px 20px;
         color: #000;
         display: inline-block;
         text-decoration: none !important; }
+/************* scroll*/
+.sticky-wrapper.is-sticky .site-navbar .stamin-main-menu > li > a {
+          padding: 5px 20px;
+          color: #000;
+          display: inline-block;
+          text-decoration: none !important; 
+}
+.sticky-wrapper.is-sticky .site-navbar .user >li > a {
+  padding: 5px 20px;
+  color: #000;
+  display: inline-block;
+  text-decoration: none !important; 
+}
+
         .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover {
           color: #f23a2e; }
         .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active:after {

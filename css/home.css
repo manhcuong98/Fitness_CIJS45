@@ -2,6 +2,8 @@
 .header .navMenu{
     justify-content:  center;
     align-items: center;
+    float: right;
+    padding-right: 120px;
 }
 .user{
     display: flex;
@@ -68,4 +70,26 @@
     justify-content: space-between;
     list-style-type: none;
     padding: inherit;
+}
+.header .nav-link{
+    color: #fff;
+}
+.header .user li a i{
+    color: #fff;
+}
+/* .sticky-wrapper .site-navbar .navMenu .nav-item > a.active .fix1{
+    color: #333 ;
+    position: relative; 
+} */
+/* .sticky-wrapper.is-sticky .site-navbar .stamin-main-menu > li > a {
+    padding: 5px 20px;
+    color: #000;
+    display: inline-block;
+    text-decoration: none !important; 
+} */
+.sticky-wrapper.is-sticky .site-navbar .user .nav-item-inner a i {
+    /* padding: 5px 20px; */
+    color: #000 !important;
+    display: inline-block;
+    text-decoration: none !important; 
 }
