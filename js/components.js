@@ -39,7 +39,7 @@ components.programsScreen = `
   <option value="1">Female</option>
   <option value="2" >Both</option>
 </select>
-<button type="button" class="btn btn-primary" style="background-color:#c76ddd;" onclick="model.filterProgram()">Submit</button>
+<button type="button" class="btn btn-primary" style="background-color:#eb3737;" onclick="model.filterProgram()">Submit</button>
 </form>
     <div class="program-container">
         <div class="list-program"></div>
@@ -68,7 +68,7 @@ components.showProgram = `
                     </div>
                     <form id="send-comment-form">
                         <div class="input-wraper">
-                            <input type="text" name="comment" placeholder="Type a comment...">
+                            <input type="text" name="comment" placeholder="Tell us what you think ?">
                         </div>
                         <button type="submit" style="margin-top:-8px;"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </form>

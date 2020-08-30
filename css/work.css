@@ -34,10 +34,12 @@
   padding-left: 7px;
   padding-bottom: 50px;
 }
+.showProgram {
+  background-color: #F8F8F8;
+}
 .showProgram .video {
   text-align: center;
-  background-color: rgb(32, 32, 32);
-  margin: 0px 100px;
+  margin: 0px 210px;
 }
 .showProgram .video iframe {
   width: 1100px !important;
@@ -46,7 +48,7 @@
 .showProgram .text-des {
   margin: 20px 20px 0px 20px;
   font-size: larger;
-  line-height: 30px;
+  line-height: 37px;
   flex-grow: 1;
 }
 .showProgram .des .text-des .text {
@@ -63,14 +65,14 @@
 .showProgram .des .message-des {
   width: 50%;
   height: 400px;
-  border: 10px groove #dbdbdb;
+  border: 1px solid #dbdbdb;
   margin: 80px 100px;
   margin-right: auto;
 }
 #send-comment-form .input-wraper input {
   border: none;
-  border-top: 10px groove #dbdbdb ;
-  height: 46px;
+  border-top: 1px solid #dbdbdb ;
+  height: 64px;
 }
 #send-comment-form {
   position: relative;
@@ -89,7 +91,7 @@
 
 #send-comment-form .input-wraper {
   margin-bottom: 10px;
-  border-bottom: 10px groove #e9e3e3; 
+  border-bottom: 1px solid #dbdbdb; 
   padding-bottom: -50px;
 }
 .message-des .list-comment {

@@ -293,6 +293,13 @@ model.logout = () => {
         model.forumChange()
     }
     // model.()
+    // const unsubscribe = ref.onSnapshot(snapshot => {
+    //     console.log(snapshot.size)
+    //     if(snapshot.size >= 2){
+    //         console.log('Test'); 
+    //         unsubscribe();
+    //     }
+    //   }
     firebase.auth().signOut();
     view.setActiveScreen('loginScreen')
 }
