@@ -14,7 +14,14 @@
   height: 440px;
   border: 1px solid #dbdbdb;
   margin: 10px;
+  
+}
+.program-container .list-program .program:hover {
+  color: rgb(241, 114, 114);
+  background-color: gray;
+  border: 3px solid #529FCF;
   cursor: pointer;
+  
 }
 .program-container .list-program .program .image {
   background-size: cover;
@@ -97,12 +104,14 @@
   /* border: 1px solid; */
 }
 .message-des .list-comment .program-comment #content {
-  border-radius: 3px;
+
   border: 5px solid #ccc;
   color: #797979;
   padding: 5px 3px;
   word-break: break-all;
   margin-top: 4px;
+  border-radius: 18px;
+  background-color: #F0F2F5;
 }
 #information {
   display: flex;
