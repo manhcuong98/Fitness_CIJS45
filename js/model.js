@@ -14,14 +14,16 @@ model.login = async (data) => {
         await firebase.auth().signInWithEmailAndPassword(data.email, data.password)
 
     } catch (err) {
-        console.log(err.message);
-        if (err.code === 'auth/wrong-password') {
-            document.getElementById('passwordError').innerHTML = err.message
-        }
         if (err.code === 'auth/user-not-found') {
             document.getElementById('emailError').innerHTML = err.message
+            document.getElementById('emailError').innerHTML = "Your email is not found, please register an account if you don't have one"
+            return;
         }
-
+        if (err.code === 'auth/wrong-password') {
+            document.getElementById('passwordError').innerHTML = err.message
+            document.getElementById('passwordError').innerHTML = "Your password is incorrect, please try again"
+            return;
+        }   
     }
     view.setActiveScreen('homeScreen')
 
@@ -291,6 +293,13 @@ model.logout = () => {
         model.forumChange()
     }
     // model.()
+    // const unsubscribe = ref.onSnapshot(snapshot => {
+    //     console.log(snapshot.size)
+    //     if(snapshot.size >= 2){
+    //         console.log('Test'); 
+    //         unsubscribe();
+    //     }
+    //   }
     firebase.auth().signOut();
-
+    view.setActiveScreen('loginScreen')
 }

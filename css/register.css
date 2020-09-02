@@ -124,7 +124,7 @@ list-type-ulli, .socials {
   max-width: 100%;
   height: auto; 
 }
-figure {
+.signup figure {
   margin: 0; }
 
 .signup p{
@@ -195,7 +195,7 @@ figure {
 .signup-image {
   margin: 0 55px; 
 }
-.form-title {
+.signup .form-title {
   margin-bottom: 33px; 
 }
 .signup-image {
@@ -205,7 +205,7 @@ figure {
   margin-bottom: 50px;
   text-align: center; 
 }
-.form-submit {
+.signup .form-submit {
   display: inline-block;
   background: #6dabe4;
   color: #fff;
@@ -234,12 +234,14 @@ figure {
 
 .term-service {
   font-size: 13px;
-  color: #222; }
+  color: #4292dc !important;
+ }
 
 .signup-form {
   margin-left: 75px;
   margin-right: 75px;
-  padding-left: 34px; }
+  padding-left: 34px; 
+}
 
 .register-form {
   width: 100%; }
@@ -247,11 +249,12 @@ figure {
 .signup .form-group {
   position: relative;
   margin-bottom: 25px;
-  overflow: hidden; }
-  .form-group:last-child {
+  overflow: hidden; 
+}
+.signup .form-group:last-child {
     margin-bottom: 0px; }
 
-.signup input {
+.signup input{
   width: 100%;
   display: block;
   border: none;
@@ -328,7 +331,7 @@ figure {
   font-family: 'Material-Design-Iconic-Font';
   font-weight: bold; }
 
-.agree-term {
+.signup .agree-term {
   display: inline-block;
   width: auto; }
 
@@ -354,7 +357,7 @@ figure {
   display: block;
   margin-top: 20px; }
 
-label.valid {
+  .signup label.valid {
   display: block;
   position: absolute;
   right: 0;
@@ -363,7 +366,7 @@ label.valid {
   width: 20px;
   height: 20px;
   background: transparent; }
-  label.valid:after {
+  .signup label.valid:after {
     font-family: 'Material-Design-Iconic-Font';
     content: '\f269';
     width: 100%;
@@ -373,7 +376,7 @@ label.valid {
     font-size: 16px;
     color: green; }
 
-.label-agree-term {
+    .signup .label-agree-term {
   position: relative;
   top: 0%;
   transform: translateY(0);
@@ -382,7 +385,7 @@ label.valid {
   -o-transform: translateY(0);
   -ms-transform: translateY(0); }
 
-.material-icons-name {
+  .signup .material-icons-name {
   font-size: 18px; }
 
 .signin-content {
@@ -397,7 +400,7 @@ label.valid {
   -ms-align-items: center;
   margin-top: 80px; }
 
-.social-label {
+  .signup .social-label {
   display: inline-block;
   margin-right: 15px; }
 
