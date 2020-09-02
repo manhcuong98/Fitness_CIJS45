@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     console.log(model.currentUser)
     document.getElementById('user-item').innerHTML =
       `
-      <li onclick = "firebase.auth().signOut();">
+      <li onclick = "model.logout()">
         <a href = "#">Log out</a> </li>
       `
     //view.setActiveScreen(`chatScreen`)
@@ -44,8 +44,9 @@ firebase.auth().onAuthStateChanged(function (user) {
       `
   }
 });
+
 init = () => {
-  view.setActiveScreen('programs')
+  view.setActiveScreen('homeScreen');
   //view.setActiveScreen('forumScreen')
 }
 window.onload = init

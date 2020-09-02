@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/work.css">
+    <link rel="stylesheet" href="../css/forum.css">
+
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../css/boo/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/boo/jquery-ui.css">
+    <!-- carousel -->
+    <link rel="stylesheet" href="../css/boo/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/boo/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/boo/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../css/boo/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../css/boo/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../css/boo/style.css">
+
+    <link href="../css/boo/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/boo/aos.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="custom-container navbar-inner">
+            <ul class="navbar-items nav pull-left">
+                <li class="nav-item">
+                    <div class="nav-item-inner">
+                        <div class="main-logo">
+                            <a href="#" title="Stamin">
+                                <img class="custom-logo img-responsive"
+                                    src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                    alt="Stamin" title="Stamin">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navMenu navbar-items nav">
+                <li class="nav-item">
+                    <div class="nav-item-inner">
+                        <ul id="stamin-main-menu" class="nav stamin-main-menu">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Working & Program</a>
+
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Gym & Network</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link ">Forum</a>
+
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="nav-link dropdown-toggle">Contact Us</a>
+                                <ul role="menu" class=" dropdown-menu">
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link">Contact Us 1</a></li>
+                                    <li class="menu-item">
+                                        <a href="#" class="nav-link">Contact Us 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <div class="user">
+                    <li class="nav-item">
+                        <div class="nav-item-inner">
+                            <div class="search-toggle-wrap">
+                                <a class="full-bar-search-toggle" href="#">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item-inner">
+                            <div class="mini-cart-dropdown dropdown">
+                                <a href="" class="mini-cart-item">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu cart-dropdown-menu">
+                                    <li class="cart-item">
+                                        <div>
+                                            <ul class="user-item">
+                                                <li>
+                                                    <a href="../html/temp_login.html">Login</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../html/temp_register.html">Register</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="site-section bg-light contact-wrap" id="contact-section">
+        <div class="container">
+
+
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-md-8  section-heading">
+                    <span class="subheading">Get In Touch</span>
+                    <h2 class="heading mb-3">Contact Us</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                        there live the blind
+                        texts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form method="post" data-aos="fade">
+                        <div class="form-group row">
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="" cols="30" rows="10"
+                                    placeholder="Write your message here."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+
+                                <input type="submit" class="btn btn-primary py-3 px-5 btn-block" value="Send Message">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="media_image-1" class="widget widget_media_image">
+                                <img width="241" height="50"
+                                    src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/12/logo-lightd-1.png"
+                                    class="image wp-image-25  attachment-full size-full" alt=""
+                                    style="max-width: 100%; height: auto;"></section>
+
+                            <section id="text-2" class="widget widget_text">
+                                <div class="textwidget">
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+                                </div>
+                            </section>
+                            <section id="zozo_social_widget-3" class="widget zozo_social_widget">
+                                <ul class="social">
+                                    <li>
+                                        <a href="#" target="_blank" class="social-fb">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" class="social-twitter">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-instagram">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-pinterest">
+                                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" target="_blank" class="social-tumblr">
+                                            <i class="fa fa-tumblr" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="stamin_latest_post_widget-2" class="widget stamin_latest_post_widget">
+                                <h3 class="widget-title">Latest Posts</h3>
+                                <div class="widg-content">
+                                    <ul class="side-newsfeed">
+                                        <li>
+                                            <div class="side-item">
+                                                <div class="side-image"> <a
+                                                        href="https://elementor.zozothemes.com/stamin/2019/04/19/fitness-helps-you-think-and-feel-better/"
+                                                        rel="bookmark"><img width="80" height="80"
+                                                            src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg"
+                                                            class="img-responsive wp-post-image" alt=""
+                                                            srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-1-1-100x100.jpg 100w"
+                                                            sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                <div class="side-item-text"> <a class="themeh-color"
+                                                        href="https://elementor.zozothemes.com/stamin/2019/04/19/fitness-helps-you-think-and-feel-better/"
+                                                        rel="bookmark">Fitness helps you think and feel better</a>
+                                                    <div class="comments-wrap">
+                                                        <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="side-item">
+                                                <div class="side-image"> <a
+                                                        href="https://elementor.zozothemes.com/stamin/2019/04/19/10-tips-how-to-prepare-meals-fast-and-easy/"
+                                                        rel="bookmark"><img width="80" height="80"
+                                                            src="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg"
+                                                            class="img-responsive wp-post-image" alt=""
+                                                            srcset="https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-80x80.jpg 80w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-300x300.jpg 300w, https://elementor.zozothemes.com/stamin/wp-content/uploads/sites/5/2019/04/blog-5-1-100x100.jpg 100w"
+                                                            sizes="(max-width: 80px) 100vw, 80px"></a></div>
+                                                <div class="side-item-text"> <a class="themeh-color"
+                                                        href="https://elementor.zozothemes.com/stamin/2019/04/19/10-tips-how-to-prepare-meals-fast-and-easy/"
+                                                        rel="bookmark">10 Tips How to Prepare Meals Fast and
+                                                        Easy</a>
+                                                    <div class="comments-wrap">
+                                                        <div class="meta-left"> <span class="">April 19, 2019</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="null-instagram-feed-2" class="widget null-instagram-feed">
+                                <h3 class="widget-title">Instagram</h3>
+                                <ul class="nav instagram-pics instagram-size-thumbnail insta-col-3"></ul>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-content">
+                            <section id="stamin_mailchimp_widget-2" class="widget stamin_mailchimp_widget">
+                                <h3 class="widget-title">Newsletter</h3>
+                                <div class="mailchimp-wrapper">
+                                    <form class="zozo-mc-form" id="zozo-mc-form" method="post">
+                                        <p class="zozo-mc-subtitle">Lorem ipsum is placeholder text commonly used in
+                                            the
+                                            graphic, print, and publishing industries for previewing layouts and
+                                            visual
+                                            mockups.</p> <input type="hidden" name="stamin_mc_listid" value="">
+                                        <div class="input-group"> <input type="text"
+                                                class="form-control zozo-mc-email" id="zozo-mc-email"
+                                                placeholder="Email Address" name="zozo_mc_email">
+                                            <input class="input-group-addon zozo-mc btn btn-default" type="button"
+                                                name="Sign Up" value="Sign Up"></div>
+                                    </form>
+                                    <div class="mc-notice-group" data-success="Success." data-fail="Failure."> <span
+                                            class="mc-notice-msg"></span></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                  <div class=" pt-5">
+                    <p class="copyright">
+                  
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" ></a>
+              
+                  </p>
+                  </div>
+                </div>
+      
+              </div>
+        </footer>
+    </div>
+    <div class="web"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/jquery-carousel/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-carousel/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/jquery-carousel/jquery-ui.js"></script>
+    <script src="../js/jquery-carousel/popper.min.js"></script>
+    <script src="../js/jquery-carousel/bootstrap.min.js"></script>
+    <script src="../js/jquery-carousel/owl.carousel.min.js"></script>
+    <script src="../js/jquery-carousel/jquery.stellar.min.js"></script>
+    <script src="../js/jquery-carousel/jquery.countdown.min.js"></script>
+    <script src="../js/jquery-carousel/bootstrap-datepicker.min.js"></script>
+    <script src="../js/jquery-carousel/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery-carousel/aos.js"></script>
+    <script src="../js/jquery-carousel/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery-carousel/jquery.sticky.js"></script>
+    <script src="../js/jquery-carousel/jquery.mb.YTPlayer.min.js"></script>
+
+
+
+
+    <script src="../js/jquery-carousel/main.js"></script>
+
+
+    <script src="..//js/components.js"></script>
+    <script src="..//js/controller.js"></script>
+    <script src="..//js/index.js"></script>
+    <script src="..//js/model.js"></script>
+    <script src="..//js/view.js"></script>
+</body>
+
+</html>
