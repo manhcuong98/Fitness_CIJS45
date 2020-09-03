@@ -330,7 +330,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
             let text = `
             <br><h2 style = "font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">WORKOUT DETAILS </h2>
             <span class = "text" style="font-weight:Bold"> Duration : </span> ${program.time} minutes. <br>
-            <span class = "text" style="font-weight:Bold">Calories burn : </span>${program.calo - 20} - ${program.calo + 20}. <br>
+            <span class = "text" style="font-weight:Bold">Calories burn : </span>${program.calo - 20} - ${program.calo + 20} Kcal. <br>
             <span class = "text" style="font-weight:Bold">Gender :</span> ${controller.changeGender(program.sex)}. <br>
             `
             document.getElementsByClassName('text-des')[0].innerHTML = text
