@@ -176,12 +176,47 @@
     z-index: 1;
   }
   
-  @media (pointer: coarse) and (hover: none) {
+  /* @media (pointer: coarse) and (hover: none) {
     .header1 {
       background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
     }
     .header1 video {
       display: none;
     }
+  } */
+  /*********** back to top *******/
+  #button1 {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
   }
-  
+  #button1::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button1:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button1:active {
+    background-color: #555;
+  }
+  #button1.show {
+    opacity: 1;
+    visibility: visible;
+  }
