@@ -371,15 +371,26 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                     alert("Please login to uploadFile")
                     return
                 }
-               
+                document.getElementById('file-error').innerHTML=''
+                document.getElementById('content-error').innerHTML=''
+                document.getElementById('title-error').innerHTML=''
                 const files = uploadPostForm.file.files
                 const contentUpload=uploadPostForm.content.value.trim()
                 const titleUpload=uploadPostForm.title.value.trim()
-                if(files.length === 0 || contentUpload==="" || titleUpload==="") {
-                // alert('Please choose file!')
-                console.log('nhap thieu');
-                } 
-                else {
+                // if(files.length === 0 || contentUpload==="" || titleUpload==="") {
+                // // alert('Please choose file!')
+                // console.log('nhap thieu');
+                // } 
+                if(files.length ===0){
+                    document.getElementById('file-error').innerHTML="Please choose an image."
+                }
+                if(contentUpload===''){
+                    document.getElementById('content-error').innerHTML='Please input content.'
+                }
+                if(titleUpload===''){
+                    document.getElementById('title-error').innerHTML='Please input title.'
+                }
+                if(files.length != 0 || contentUpload !="" || titleUpload !="") {
                     console.log('nhap du');
                     model.uploadPost(files[0], contentUpload, titleUpload)
                 }
