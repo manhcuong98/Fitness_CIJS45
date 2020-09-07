@@ -618,3 +618,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     padding: 5px 10px;
     text-align: center;
   }
+.sign-in .form-title{
+    margin-bottom: 33px;
+    text-align: center;
+}

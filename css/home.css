@@ -71,6 +71,13 @@
 .header .user li a i{
     color: #fff;
 }
+.header .site-logo{
+    padding-left: 100px;
+    padding-top: 5px;
+}
+
+
+
 /* .sticky-wrapper .site-navbar .navMenu .nav-item > a.active .fix1{
     color: #333 ;
     position: relative; 
