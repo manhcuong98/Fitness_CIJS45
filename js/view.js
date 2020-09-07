@@ -1,7 +1,5 @@
 //console.log(model.programs)
 
-
-
 const view = {}
 view.setActiveScreen = async (screenName, program = undefined) => {
     switch (screenName) {
