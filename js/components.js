@@ -521,7 +521,7 @@ components.homeScreen =`
                     <div class="col-lg-6">
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_1.jpg" alt="Image">
+                                <img src="../image/pt/1.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -533,7 +533,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_2.jpg" alt="Image">
+                                <img src="../image/pt/1.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -545,7 +545,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_3.jpg" alt="Image">
+                                <img src="../image/pt/3.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -557,7 +557,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_4.jpg" alt="Image">
+                                <img src="../image/pt/4.png" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -569,7 +569,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_1.jpg" alt="Image">
+                                <img src="../image/pt/5.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -584,7 +584,7 @@ components.homeScreen =`
                     <div class="col-lg-6">
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_1.jpg" alt="Image">
+                                <img src="../image/pt/1.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -596,7 +596,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_2.jpg" alt="Image">
+                                <img src="../image/pt/2.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -608,7 +608,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_3.jpg" alt="Image">
+                                <img src="../image/pt/3.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -620,7 +620,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_4.jpg" alt="Image">
+                                <img src="../image/pt/4.png" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -632,7 +632,7 @@ components.homeScreen =`
 
                         <div class="class-item d-flex align-items-center">
                             <a href="single.html" class="class-item-thumbnail">
-                                <img src="images/img_1.jpg" alt="Image">
+                                <img src="../image/pt/5.jpg" alt="Image">
                             </a>
                             <div class="class-item-text">
 
@@ -659,938 +659,7 @@ components.homeScreen =`
             </div>
         </div>
 
-        <div class="site-section" id="schedule-section">
-            <div class="container">
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-md-8  section-heading">
-                        <span class="subheading">Fitness Sched</span>
-                        <h2 class="heading mb-3">Schedule</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind
-                            texts.
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-                            ocean.</p>
-                    </div>
-                </div>
-
-
-
-
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="nav-sunday" role="tabpanel"
-                        aria-labelledby="nav-sunday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Sunday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-monday" role="tabpanel" aria-labelledby="nav-monday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Monday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-tuesday" role="tabpanel" aria-labelledby="nav-tuesday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Tuesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-wednesday" role="tabpanel" aria-labelledby="nav-wednesday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Wednesday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="nav-thursday" role="tabpanel" aria-labelledby="nav-thursday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Thursday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-friday" role="tabpanel" aria-labelledby="nav-friday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Friday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-saturday" role="tabpanel" aria-labelledby="nav-saturday-tab">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_3.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #3</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #1</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_2.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #2</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_4.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #4</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="class-item d-flex align-items-center">
-                                    <a href="single.html" class="class-item-thumbnail">
-                                        <img src="images/img_1.jpg" alt="Image">
-                                    </a>
-                                    <div class="class-item-text">
-                                        <span>Saturday 7:30am - 9:00am</span>
-                                        <h2><a href="single.html">Fitness Class Name #5</a></h2>
-                                        <span>By Justin Daniel</span>,
-                                        <span>30 minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+       
 
         <div class="bgimg" style="background-image: url('../image/home/bg_1.jpg');" data-stellar-background-ratio="0.5">
             <div class="container">
@@ -1623,7 +692,7 @@ components.homeScreen =`
                 <div class="row">
                     <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="">
                         <div class="person">
-                            <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+                            <img src="../image/pt/2.jpg" alt="Image" class="img-fluid">
                             <h3>Justin Daniel</h3>
                             <p class="position">Trainer</p>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -1633,7 +702,7 @@ components.homeScreen =`
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
                         <div class="person">
-                            <img src="images/person_3.jpg" alt="Image" class="img-fluid">
+                            <img src="../image/pt/1.jpg" alt="Image" class="img-fluid">
                             <h3>Matthew Davidson</h3>
                             <p class="position">Trainer</p>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -1643,7 +712,7 @@ components.homeScreen =`
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="person">
-                            <img src="images/person_2.jpg" alt="Image" class="img-fluid">
+                            <img src="../image/pt/5.jpg" alt="Image" class="img-fluid">
                             <h3>Matthew Davidson</h3>
                             <p class="position">Trainer</p>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -1653,7 +722,7 @@ components.homeScreen =`
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
                         <div class="person">
-                            <img src="images/person_4.jpg" alt="Image" class="img-fluid">
+                            <img src="../image/pt/3.jpg" alt="Image" class="img-fluid">
                             <h3>Matthew Davidson</h3>
                             <p class="position">Trainer</p>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
