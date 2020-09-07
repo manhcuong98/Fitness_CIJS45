@@ -133,12 +133,16 @@ components.forumScreen = `
     <form id="upload-post">
         <div class="input-wraper">
             <input type="text" name="title" placeholder="Title...">
+            <div class="error" id="title-error"></div>
         </div>
         <div class="input-wraper">
             <input type="text" name="content" placeholder="Content...">
+            <div class="error" id="content-error"></div>
         </div>
-        <input type="file" name="file">
-        <button type="submit">Upload file</button>
+        
+            <input type="file" name="file">
+            <button type="submit">Upload file</button>
+            <div class="error" id="file-error"></div>
     </form>
 </div>
 <div class="main">
