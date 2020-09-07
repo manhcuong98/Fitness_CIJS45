@@ -111,8 +111,10 @@
     color: #f23a2e;
 }
 
-.footer{
-    background-color: antiquewhite;
+.footer-section{
+    background-color: #F8F9FA;
+    padding: 50px 0 !important ;
+
 }
 .footer .social{
     display: flex;
