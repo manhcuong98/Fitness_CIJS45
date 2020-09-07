@@ -930,8 +930,8 @@ h1, h2, h3, h4, h5,
     .bgimg a:hover {
       text-decoration: none; }
 
-.footer-section {
-  padding: 7em 0; }
+/* .footer-section {
+  padding: 7em 0; } */
   .footer-section p {
     font-size: 1rem; }
   .footer-section h3 {
@@ -969,5 +969,5 @@ h1, h2, h3, h4, h5,
 .contact-wrap {
   padding-bottom: 8rem !important; }
 
-.footer-section {
-  padding-top: 12rem !important; }
+/* .footer-section {
+  padding-top: 12rem !important; } */
