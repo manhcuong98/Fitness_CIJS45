@@ -83,8 +83,7 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 });
             }; 
             siteMenuClone();
-        
-        
+
             var sitePlusMinus = function() {
                 $('.js-btn-minus').on('click', function(e){
                     e.preventDefault();
@@ -100,8 +99,6 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                 });
             };
             // sitePlusMinus();
-        
-        
             var siteSliderRange = function() {
             $( "#slider-range" ).slider({
               range: true,
@@ -116,9 +113,6 @@ view.setActiveScreen = async (screenName, program = undefined) => {
               " - $" + $( "#slider-range" ).slider( "values", 1 ) );
             };
             // siteSliderRange();
-        
-        
-            
             var siteCarousel = function () {
                 if ( $('.nonloop-block-13').length > 0 ) {
                     $('.nonloop-block-13').owlCarousel({
@@ -151,7 +145,6 @@ view.setActiveScreen = async (screenName, program = undefined) => {
                     }
                     });
                 }
-        
         
                 if ( $('.nonloop-block-14').length > 0 ) {
                     $('.nonloop-block-14').owlCarousel({
