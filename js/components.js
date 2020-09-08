@@ -716,7 +716,7 @@ components.homeScreen =`
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="person">
-                            <img src="../image/pt/5.jpg" alt="Image" class="img-fluid">
+                            <img src="../image/pt/1.jpg" alt="Image" class="img-fluid">
                             <h3>Matthew Davidson</h3>
                             <p class="position">Trainer</p>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
