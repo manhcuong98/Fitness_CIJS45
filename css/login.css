@@ -297,7 +297,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     color: #222;
     display: block;
     text-align: center; 
-    padding-top: 80px;
+    /* padding-top: 80px; */
   }
 
   
@@ -623,3 +623,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     margin-bottom: 33px;
     text-align: center;
 }
+.label-agree-term{
+  display: none !important;
+}
+
