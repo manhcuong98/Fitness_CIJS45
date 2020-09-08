@@ -5,7 +5,7 @@ components.programsScreen = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ components.showProgram = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
@@ -84,7 +84,7 @@ components.showNetwork =
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
@@ -119,7 +119,7 @@ components.forumScreen = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
@@ -190,7 +190,7 @@ components.contactUsScreen = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">//</h2>
+            <h2 class="">NO PAIN. NO GAIN.</h2>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ components.loginScreen = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
@@ -320,7 +320,7 @@ components.registerScreen = `
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="">Class Single Post</h2>
+              <h2 class="">NO PAIN. NO GAIN.</h2>
               <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deserunt minima porro, natus sequi ullam.</p>
             </div>
           </div>
