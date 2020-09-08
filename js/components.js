@@ -79,7 +79,7 @@ components.showProgram = `
 `
 components.showNetwork = 
 `
-<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
+<div class="bgimg" style="background-image: url('https://www.thuocdantoc.org/wp-content/uploads/2019/09/bi-tri-co-nen-tap-gym-1.jpg');" data-stellar-background-ratio="0.5">
     
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -114,7 +114,7 @@ components.showNetwork =
 </div>
 `
 components.forumScreen = `
-<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
+<div class="bgimg" style="background-image: url('https://hellobacsi.com/wp-content/uploads/2020/02/phong-tap-gym.jpg');" data-stellar-background-ratio="0.5">
     
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -256,7 +256,7 @@ components.contactUsScreen = `
 
 `
 components.loginScreen = `
-<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
+<div class="bgimg" style="background-image: url('https://vinmec-prod.s3.amazonaws.com/images/20200416_073802_523277_tapgym.max-800x800.jpg');" data-stellar-background-ratio="0.5">
     
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -315,7 +315,7 @@ components.loginScreen = `
 </section>
 `
 components.registerScreen = `
-<div class="bgimg" style="background-image: url('https://image.shutterstock.com/image-photo/woman-exercise-workout-gym-fitness-260nw-749969473.jpg');" data-stellar-background-ratio="0.5">
+<div class="bgimg" style="background-image: url('https://media.thethao247.vn/origin_414x0/upload/nguyetdt/2020/02/17/tap-gym.jpg');" data-stellar-background-ratio="0.5">
     
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
